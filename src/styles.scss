@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'normalize.scss';
+
+.header {
+  
+}
+body {
+  
+}
+.wrapper {
+  max-width: 1280px;
+  display: flex;
+  margin: 0 auto;
+}
+.nav {
+    &__list {
+        display: flex;
+        list-style-type: none;
+      }
+}
