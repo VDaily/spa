@@ -21,4 +21,5 @@ import { ContactsComponent } from './contacts/contacts.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {}

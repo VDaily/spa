@@ -1,1 +1,119 @@
-<p>contacts works!</p>
+<section class="contact-info">
+  <div class="wrapper">
+    <div class="contact-info__inner">
+      <div class="contact-info__main">
+        <span></span>
+        <h1 class="section__title contact-info__title">Get in touch</h1>
+
+        <address class="address">
+          <div class="address__content ">
+            <p class="address__paragraph address__paragraph-mail">Talk to us:</p>
+            <a class="address__link address__mail" href="mailto:hello@createx.com">{{email}}</a>
+          </div>
+          <div class="address__content">
+            <p class="address__paragraph address__paragraph-phone-number">Call us:</p>
+            <a class="address__link address__phone-number" href="tel:+7405550128">{{phoneNumber}}</a>
+          </div>
+          <div class="address__content">
+
+            <p class="address__paragraph address__paragraph-location">Address:</p>
+            <a class="address__link address__location">{{address}}</a>
+          </div>
+        </address>
+
+        <div class="social">
+          <p class="social__paragraph">Follow us:</p>
+          <a class="social__link contact-info__link_shift">
+            <img class="social__facebook" src="../assets/images/social/fb.svg" alt="">
+          </a>
+          <a class="social__link contact-info__link_shift">
+            <img class="social__twitter" src="../assets/images/social/twitter.svg" alt="">
+          </a>
+
+          <a class="social__link contact-info__link_shift">
+            <img class="social__youtube" src="../assets/images/social/youtube.svg" alt="">
+          </a>
+
+          <a class="social__link contact-info__link_shift">
+            <img class="social__telegram" src="../assets/images/social/telegram.svg" alt="">
+          </a>
+
+          <a class="social__link contact-info__link_shift">
+            <img class="social__instagram" src="../assets/images/social/instagram.svg" alt="">
+          </a>
+
+          <a class="social__link">
+            <img class="social__inblog" src="../assets/images/social/inblog.svg" alt="">
+          </a>
+
+        </div>
+      </div>
+
+      <div class="contact-info__graphics">
+        <img class="contact-info__img" src="../assets/images/contact-info/map.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-us">
+  <div class="wrapper">
+    <div class="contact-us__inner">
+      <div class="contact-us__graphics">
+        <img class="contact-us__img" src="../assets/images/contact-us/woman.svg" alt="">
+      </div>
+
+      <div class="contact-us__main">
+        <h1 class="section__title contact-us__title">Drop us a line</h1>
+
+        <form class="form-contact" action="">
+          <div class="form-contact__column">
+            <div class="form-contact__row">
+              <label for="firstName" class="form-contact__label field-required">First Name</label>
+              <input type="text" class="form-contact__input" id="firstName" placeholder="Your first name" required>
+            </div>
+            <div class="form-contact__row">
+              <label for="email" class="form-contact__label field-required">Email</label>
+              <input type="email" class="form-contact__input" id="email" placeholder="Your working email" required>
+            </div>
+
+          </div>
+
+          <div class="form-contact__column">
+            <div class="form-contact__row">
+              <label for="lastName" class="form-contact__label field-required">Last Name</label>
+              <input type="text" class="form-contact__input" id="lastName" placeholder="Your last name" required>
+            </div>
+            <div class="form-contact__row">
+              <label for="phoneNumber" class="form-contact__label">Phone</label>
+              <input type="tel" class="form-contact__input" id="phoneNumber" placeholder="Your phone number">
+            </div>
+          </div>
+
+
+
+          <div class="form-contact__column form-contact__column-descrtiption">
+            <label class="form-contact__description-label field-required" for="description">Message</label>
+            <textarea class="" class="form-contact__description" name="" id="description" cols="30" rows="10" placeholder="Your message" required></textarea>
+          </div>
+
+
+          <div class="form-contact__agree form-contact__column">
+            <label class="checkbox style-a">
+              <input type="checkbox" checked="checked">
+              <div class="checkbox__checkmark"></div>
+              <div class="checkbox__text">I agree to receive communications from Createx Online School</div>
+            </label>
+            <!--                <input type="checkbox" class="form-contract__checkbox" id="agree">-->
+            <!--                <label class="form-contract__agree-label" for="agree">I agree to receive communications from Createx Online School</label>-->
+          </div>
+
+          <div class="form-contact__column">
+            <button class="btn form-contact__btn">Send message</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
