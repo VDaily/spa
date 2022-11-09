@@ -1,0 +1,130 @@
+.sign-in {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: #1E212C;
+  position: fixed;
+  //left: 50%;
+  overflow: auto;
+  font-size: 14px;
+  //transform: translate(-50%, 0);
+  background: rgba(0, 0, 0, .8);
+  &__inner {
+    max-width: 486px;
+    padding: 3em 0;
+    background: #FFFFFF;
+    border: 1px solid #E5E8ED;
+    box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16), 0px 26px 24px -10px rgba(30, 33, 44, 0.1), 0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: auto;
+  }
+  &__header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2em;
+    padding: 0 3em;
+  }
+  &__header-title {
+    font-size: 2em;
+    margin-top: 0;
+  }
+  &__header-paragraph {
+    font-size: 1em;
+    color: #787A80;
+  }
+  &__close {
+    position: absolute;
+    right: 2em;
+    top: -1em;
+    cursor: pointer;
+  }
+  // main styles
+  &__main {
+    padding: 0 3em;
+  }
+  &__main-connect {
+    position: relative;
+  }
+  &__partition {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2em 0;
+  }
+
+  &__btn_size-wide {
+    width: 100%;
+  }
+  &__forgot-link {
+    color: #FF3F3A;
+    text-decoration: none;
+    flex: 1 1 50%;
+  }
+
+  &__no-account {
+    margin: 2em 0;
+  }
+
+  &__signUp-link {
+    color: #FF3F3A;
+    text-decoration: none;
+  }
+  //  Footer styles
+
+  &__footer {
+    border-top: 1px solid #E5E8ED;
+  }
+  &__footer-inner {
+    text-align: center;
+    padding: 0 3em;
+  }
+  &__footer-paragraph {
+    color: #787A80;
+  }
+
+
+}
+
+//registation-form styles
+
+.registation-form {
+  margin-bottom: 1.2em;
+
+  &__label {
+    display: block;
+    margin: 1em 0;
+  }
+  &__input {
+    width: 100%;
+    padding: 1em;
+    background: #FFFFFF;
+
+    border: 1px solid #D7DADD;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  &__bind {
+    position: relative;
+  }
+  &__eye {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 1em;
+    top: 1.1em;
+  }
+  &__img {
+    width: 100%;
+  }
+}
+
+//rememberUser styles
+.rememberUser {
+  &__input {
+    margin-right: .5em;
+  }
+}
+
+
+
+

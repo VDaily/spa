@@ -1,0 +1,74 @@
+<div class="sign-in">
+  <div class="sign-in__inner">
+
+    <div class="sign-in__header">
+      <h2 class="sign-in__header-title">Sign in</h2>
+      <p class="sign-in__header-paragraph">Sign in to your account using email and password provided during registration.</p>
+      <span class="sign-in__close"><img src="../../assets/images/modal/close.svg" alt=""></span>
+    </div>
+    <div class="sign-in__main">
+      <form action="" class="registation-form">
+
+        <div class="registation-form__item">
+          <label for="email" class="registation-form__label">Email</label>
+          <input type="email" class="registation-form__input" id="email" placeholder="Your working email" required>
+        </div>
+
+        <div class="registation-form__item">
+          <label for="registration-pass" class="registation-form__label" required>Password</label>
+
+          <div class="registation-form__bind">
+            <input type="password" class="registation-form__input" id="registration-pass" placeholder="Your password" required>
+            <span class="registation-form__eye" (click)="changeHiddenPass()">
+              <img class="registation-form__img" *ngIf="isHiddenPass; else openEye"  src="../../assets/images/register/eye.png" alt="">
+            </span>
+            <ng-template #openEye>
+              <img class="registation-form__img" src="../../assets/images/register/eye-open.svg" alt="">
+            </ng-template>
+          </div>
+
+        </div>
+
+        <div class="sign-in__partition">
+          <label class="checkbox style-a">
+            <input type="checkbox" checked="checked">
+            <div class="checkbox__checkmark"></div>
+            <div class="checkbox__text">Keep me signed in</div>
+<!--            <input type="checkbox" class="checkbox rememberUser__input" id="rememberUser-agree">-->
+<!--            <label for="rememberUser-agree" class="rememberUser__label">Keep me signed in</label>-->
+          </label>
+
+          <a href="#" class="sign-in__forgot-link">Forgot password?</a>
+        </div>
+
+        <button class="btn sign-in__btn_size-wide">Sign in</button>
+
+        <p class="sign-in__no-account">Dont'h have an account? <a href="#" class="sign-in__signUp-link">Sign up</a></p>
+      </form>
+    </div>
+
+    <div class="sign-in__footer">
+      <div class="sign-in__footer-inner">
+        <p class="sign-in__footer-paragraph">Or sign in with</p>
+        <div class="social">
+          <a class="social__link footer__link_shift">
+            <img class="social__facebook" src="../assets/images/social/fb.svg" alt="">
+          </a>
+
+          <a class="social__link footer__link_shift">
+            <img class="social__youtube" src="../assets/images/social/google.svg" alt="">
+          </a>
+          <a class="social__link footer__link_shift">
+            <img class="social__twitter" src="../assets/images/social/twitter.svg" alt="">
+          </a>
+
+          <a class="social__link">
+            <img class="social__inblog" src="../assets/images/social/inblog.svg" alt="">
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
