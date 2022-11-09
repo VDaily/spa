@@ -1,13 +1,17 @@
-<div class="sign-in">
-  <div class="sign-in__inner">
+<div class="sign-up">
+  <div class="sign-up__inner">
 
-    <div class="sign-in__header">
-      <h2 class="sign-in__header-title">Sign in</h2>
-      <p class="sign-in__header-paragraph">Sign in to your account using email and password provided during registration.</p>
-      <span class="sign-in__close"><img src="../../assets/images/modal/close.svg" alt=""></span>
+    <div class="sign-up__header">
+      <h2 class="sign-up__header-title">Sign Up</h2>
+      <p class="sign-up__header-paragraph">Registration takes less than a minute but gives you full control over your studying.</p>
+      <span class="sign-up__close"><img src="../../assets/images/modal/close.svg" alt=""></span>
     </div>
-    <div class="sign-in__main">
+    <div class="sign-up__main">
       <form action="" class="registation-form">
+        <div class="registation-form__item">
+          <label for="fullname" class="registation-form__label">Full Name</label>
+          <input type="text" class="registation-form__input" id="fullname" placeholder="Your full name" required>
+        </div>
 
         <div class="registation-form__item">
           <label for="email" class="registation-form__label">Email</label>
@@ -15,10 +19,10 @@
         </div>
 
         <div class="registation-form__item">
-          <label for="sign-in-pass" class="registation-form__label" required>Password</label>
+          <label for="registration-pass" class="registation-form__label" required>Password</label>
 
           <div class="registation-form__bind">
-            <input type="password" class="registation-form__input" id="sign-in-pass" placeholder="Your password" required>
+            <input type="password" class="registation-form__input" id="registration-pass" placeholder="Your password" required>
             <span class="registation-form__eye" (click)="changeHiddenPass()">
               <img class="registation-form__img" *ngIf="isHiddenPass; else openEye"  src="../../assets/images/register/eye.png" alt="">
             </span>
@@ -26,30 +30,42 @@
               <img class="registation-form__img" src="../../assets/images/register/eye-open.svg" alt="">
             </ng-template>
           </div>
-
         </div>
 
-        <div class="sign-in__partition">
+        <div class="registation-form__item">
+          <label for="registration-passAgain" class="registation-form__label" required>Confirm Password</label>
+
+          <div class="registation-form__bind">
+            <input type="password" class="registation-form__input" id="registration-passAgain" placeholder="Your password again" required>
+            <span class="registation-form__eye" (click)="changeHiddenPassAgain()">
+              <img class="registation-form__img" *ngIf="isHiddenPassAgain; else openEye"  src="../../assets/images/register/eye.png" alt="">
+            </span>
+            <ng-template #openEye>
+              <img class="registation-form__img" src="../../assets/images/register/eye-open.svg" alt="">
+            </ng-template>
+          </div>
+        </div>
+
+        <div class="sign-up__partition">
           <label class="checkbox style-a">
             <input type="checkbox" checked="checked">
             <div class="checkbox__checkmark"></div>
-            <div class="checkbox__text">Keep me signed in</div>
+            <div class="checkbox__text">Remember</div>
             <!--            <input type="checkbox" class="checkbox rememberUser__input" id="rememberUser-agree">-->
             <!--            <label for="rememberUser-agree" class="rememberUser__label">Keep me signed in</label>-->
           </label>
 
-          <a href="#" class="sign-in__forgot-link">Forgot password?</a>
         </div>
 
-        <button class="btn sign-in__btn_size-wide">Sign in</button>
+        <button class="btn sign-up__btn_size-wide">Sign up</button>
 
-        <p class="sign-in__no-account">Dont'h have an account? <a href="#" class="sign-in__signUp-link">Sign up</a></p>
+        <p class="sign-up__no-account">Dont'h have an account? <a href="#" class="sign-up__signUp-link">Sign in</a></p>
       </form>
     </div>
 
-    <div class="sign-in__footer">
-      <div class="sign-in__footer-inner">
-        <p class="sign-in__footer-paragraph">Or sign in with</p>
+    <div class="sign-up__footer">
+      <div class="sign-up__footer-inner">
+        <p class="sign-up__footer-paragraph">Or sign in with</p>
         <div class="social">
           <a class="social__link footer__link_shift">
             <img class="social__facebook" src="../assets/images/social/fb.svg" alt="">

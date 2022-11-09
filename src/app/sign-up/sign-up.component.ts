@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
   isHiddenPass = true;
+  isHiddenPassAgain = true;
   constructor() { }
 
   ngOnInit(): void {
@@ -22,6 +23,16 @@ export class SignUpComponent implements OnInit {
     } else {
       input.type = "text";
     }
+  }
+  changeHiddenPassAgain() {
+    this.isHiddenPassAgain = !this.isHiddenPassAgain;
+    const input = document.getElementById("registration-passAgain") as HTMLInputElement;
+    if(!input) throw new Error("Не найден элемент #registration-passAgain");
 
+    if(input.type === "text") {
+      input.type = "password";
+    } else {
+      input.type = "text";
+    }
   }
 }
