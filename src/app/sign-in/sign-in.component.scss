@@ -51,7 +51,7 @@
   &__partition {
     display: flex;
     justify-content: space-between;
-    margin: 1.2em 0;
+    margin: 1em 0;
   }
 
   &__btn_size-wide {
@@ -64,7 +64,7 @@
   }
 
   &__no-account {
-    margin: 2em 0;
+    margin: 1.3em 0;
   }
 
   &__signUp-link {
@@ -82,6 +82,7 @@
   }
   &__footer-paragraph {
     color: #787A80;
+    margin: 1.3em 0;
   }
 
 
@@ -94,7 +95,7 @@
 
   &__label {
     display: block;
-    margin: 1em 0;
+    margin: .7em 0;
   }
   &__input {
     width: 100%;

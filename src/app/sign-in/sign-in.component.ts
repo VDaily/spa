@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { SocialItemsService } from '../services/socialItems/social-items.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,21 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInComponent implements OnInit {
   isHiddenPass = true;
-  constructor() { }
+  @ViewChild('inputPassOne') inputPassOne!: ElementRef<HTMLInputElement>;
+  constructor(private social: SocialItemsService) {
+
+  }
 
   ngOnInit(): void {
   }
 
+  get socialItems() {
+    return this.social.socialItems;
+  }
   changeHiddenPass() {
     this.isHiddenPass = !this.isHiddenPass;
-    const input = document.getElementById("registration-pass") as HTMLInputElement;
-    if(!input) throw new Error("Не найден элемент #registration-pass");
-
-    if(input.type === "text") {
-      input.type = "password";
+    let inputPassOne = this.inputPassOne.nativeElement;
+    if(inputPassOne.type === "text") {
+      inputPassOne.type = "password";
     } else {
-      input.type = "text";
+      inputPassOne.type = "text";
     }
-
   }
 }

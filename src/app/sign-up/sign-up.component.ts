@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { SocialItemsService } from '../services/socialItems/social-items.service';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -8,31 +8,36 @@ import { Component, OnInit } from '@angular/core';
 export class SignUpComponent implements OnInit {
   isHiddenPass = true;
   isHiddenPassAgain = true;
-  constructor() { }
+  @ViewChild('inputPassOne') inputPassOne!: ElementRef<HTMLInputElement>;
+  @ViewChild('inputPassTwo') inputPassTwo!: ElementRef<HTMLInputElement>;
+  constructor(
+    private social: SocialItemsService
+  ) { }
 
   ngOnInit(): void {
   }
 
   changeHiddenPass() {
     this.isHiddenPass = !this.isHiddenPass;
-    const input = document.getElementById("registration-pass") as HTMLInputElement;
-    if(!input) throw new Error("Не найден элемент #registration-pass");
+    let inputPassOne = this.inputPassOne.nativeElement;
 
-    if(input.type === "text") {
-      input.type = "password";
+    if(inputPassOne.type === "text") {
+      inputPassOne.type = "password";
     } else {
-      input.type = "text";
+      inputPassOne.type = "text";
     }
   }
   changeHiddenPassAgain() {
     this.isHiddenPassAgain = !this.isHiddenPassAgain;
-    const input = document.getElementById("registration-passAgain") as HTMLInputElement;
-    if(!input) throw new Error("Не найден элемент #registration-passAgain");
+    let inputPassTwo = this.inputPassTwo.nativeElement;
 
-    if(input.type === "text") {
-      input.type = "password";
+    if(inputPassTwo.type === "text") {
+      inputPassTwo.type = "password";
     } else {
-      input.type = "text";
+      inputPassTwo.type = "text";
     }
+  }
+  get socialItems() {
+    return this.social.socialItems;
   }
 }

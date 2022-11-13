@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ContactsComponent } from './contacts/contacts.component';
     SignInComponent,
     SignUpComponent,
     ContactsComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

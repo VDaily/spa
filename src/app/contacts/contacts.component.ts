@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialItemsService } from '../services/socialItems/social-items.service';
 
 @Component({
   selector: 'app-contacts',
@@ -11,8 +12,12 @@ export class ContactsComponent implements OnInit {
   address = "2464 Royal Ln. Mesa, New Jersey 45463, USA";
 
 
-  constructor() { }
+  constructor(private social: SocialItemsService) {
 
+  }
+  get socialItems() {
+    return this.social.socialItems;
+  }
   ngOnInit(): void {
   }
 
