@@ -104,7 +104,7 @@
 </header>
 
 <main class="main">
-  <app-sign-up></app-sign-up>
+  <app-single-post></app-single-post>
 </main>
 
 
@@ -112,6 +112,7 @@
   <div class="wrapper">
     <div class="footer__inner">
       <div class="information-blog">
+<!--        <img src="./assets/images/logo/logo.svg" class="" alt="логотип компании">-->
         <svg width="130" height="22" viewBox="0 0 130 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_31066_1481)">
             <path
@@ -153,13 +154,11 @@
         </p>
 
         <div class="social">
-          <ng-container *ngFor="let item of socialItems; let i = index">
+          <ng-container *ngFor="let item of socialItems(socialFooterArr); let i = index">
             <ng-container *ngIf="i <= 10">
-              <ng-container *ngIf="item.options !== 'authorization'">
-                <a href="#" class="social__link social__link_shift">
-                  <button class="social__{{item.name}}"></button>
-                </a>
-<!-              </ng-container>
+              <a href="#" class="social__link social__link_shift">
+                <button class="social__{{item.name}}"></button>
+              </a>
             </ng-container>
           </ng-container>
         </div>

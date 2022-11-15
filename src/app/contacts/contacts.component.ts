@@ -10,13 +10,13 @@ export class ContactsComponent implements OnInit {
   email = "hello@createx.com";
   phoneNumber = "+7(405) 555-0128";
   address = "2464 Royal Ln. Mesa, New Jersey 45463, USA";
-
+  socialContactsArr = ['facebook', 'twitter', 'youtube', 'telegram', 'instagram', 'inblog'];
 
   constructor(private social: SocialItemsService) {
 
   }
-  get socialItems() {
-    return this.social.socialItems;
+  socialItems(socialItems: string[]) {
+    return this.social.socialItems(socialItems);
   }
   ngOnInit(): void {
   }

@@ -8,7 +8,7 @@ import { SocialItemsService } from '../services/socialItems/social-items.service
 export class SignUpComponent implements OnInit {
   isHiddenPass = true;
   isHiddenPassAgain = true;
-
+  socialLogUp = ['facebook', 'google', 'twitter', 'inblog']
   constructor(
     private social: SocialItemsService
   ) { }
@@ -16,7 +16,7 @@ export class SignUpComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get socialItems() {
-    return this.social.socialItems;
+  socialItems(socialItems: string[]) {
+    return this.social.socialItems(socialItems);
   }
 }

@@ -60,14 +60,12 @@
     <div class="sign-up__footer">
       <div class="sign-up__footer-inner">
         <p class="sign-up__footer-paragraph">Or sign in with</p>
-        <div class="social">
-          <ng-container *ngFor="let item of socialItems; let i = index">
+        <div class="social sign-up_decoration">
+          <ng-container *ngFor="let item of socialItems(socialLogUp); let i = index">
             <ng-container *ngIf="i <= 10">
-              <ng-container *ngIf="item.options !== 'no'">
                 <a href="#" class="social__link social__link_shift">
                   <button class="social__{{item.name}}"></button>
                 </a>
-              </ng-container>
             </ng-container>
           </ng-container>
 

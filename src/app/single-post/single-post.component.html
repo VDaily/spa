@@ -1,0 +1,255 @@
+<section class="articles-content">
+  <div class="wrapper">
+    <div class="articles-content__inner">
+      <div class="articles">
+        <article class="article">
+          <div class="article__header">
+            <div class="navigation-chain">
+              <a href="#" class="navigation-chain__link">Article</a>
+              <a href="#" class="navigation-chain__link navigation-chain__link_active">HR & Recruiting</a>
+            </div>
+
+            <h1 class="article__title">HR statistics: job search, interviews, hiring and recruiting</h1>
+
+            <div class="article__additional-info">
+              <div class="date-info">
+                <span class="date-info__date">August 3, 2020</span>
+                <span class="date-info__time-read">4 min read</span>
+              </div>
+
+              <div class="share">
+                <span class="share__title">Share:</span>
+                <div class="social">
+                  <ng-container *ngFor="let socialItem of socialItems(socialArticleArr); let i = index">
+                    <ng-container *ngIf="i <= 10">
+                      <a href="#" class="social__link social__link_shift">
+                        <button class="social__{{socialItem.name}}"></button>
+                      </a>
+                    </ng-container>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="article__main">
+            <div class="article__main-graphics">
+              <img class="article__img" src="./assets/images/single-post/article/image.svg" alt="изображение статьи">
+            </div>
+
+
+            <div class="article__main-content">
+              <p class="article__main-paragraph">Vulputate vitae pellentesque scelerisque luctus consequat mattis
+                pellentesque dui odio. Interdum aenean
+                sit malesuada ornare sed gravida rhoncus, congue. Purus auctor nullam diam quis est hendrerit ac
+                euismod. </p>
+
+              <p class="article__main-paragraph">
+                At facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus in et sagittis, vitae diam
+                cras dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate metus ornare pharetra,
+                neque, fermentum. Vel nec rhoncus, non nunc, neque in massa. Feugiat leo nam nisl lacinia amet, odio. Mi
+                varius viverra risus vel.
+              </p>
+
+              <p class="article__main-paragraph">Amet, morbi sed pharetra, elit eget mi potenti. Condimentum orci
+                interdum feugiat lectus libero duis.
+                Nisl massa, elementum varius sit. Nunc felis, porttitor aliquam urna, accumsan et sed. Aliquet non sed
+                duis diam vehicula rhoncus. In dictum nullam tincidunt semper pellentesque purus morbi sed. Ut aliquet
+                velit pharetra, nisi nunc, non.</p>
+
+              <blockquote class="article__blockquote">
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis
+                fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non.
+                Congue tortor in tot euismod vulputate etiam eros. Vel accumsan at elit neque, ipsum.</span>
+              </blockquote>
+              <p class="article__main-paragraph">
+                Mauris amet arcu nisl vel dictum tellus. Sed rhoncus, ut sed id ut erat mattis. Vitae mus blandit in
+                neque amet non fringilla blandit:
+              </p>
+              <ul class="article__list">
+                <li class="article__list-item">A fermentum in morbi pretium aliquam adipiscing donec tempus.</li>
+                <li class="article__list-item">Vulputate placerat amet pulvinar lorem nisl.</li>
+                <li class="article__list-item">Consequat feugiat habitant gravida quisque elit bibendum id adipiscing
+                  sed.
+                </li>
+                <li class="article__list-item">Etiam duis lobortis in fames ultrices commodo nibh.</li>
+              </ul>
+
+              <p class="article__main-paragraph">
+                Enim, vel massa odio diam. Blandit massa gravida feugiat elementum id nec sed leo. Nisi in ornare lectus
+                eget. Urna, risus, consectetur volutpat lorem purus. Velit aliquet nibh vitae maecenas. Consectetur
+                neque ut aliquam eros, purus enim dignissim aenean vitae. Ultrices fames augue mattis tortor est justo,
+                pharetra nibh risus. Facilisi at porttitor volutpat natoque proin amet, nulla. Vivamus ut lobortis
+                sagittis curabitur tellus convallis eget netus vitae.
+              </p>
+
+            </div>
+
+
+          </div>
+
+          <div class="article__footer">
+            <div class="tags">
+              <span class="tags__title">Tags: </span>
+              <div class="tags__main">
+                <a href="#" class="tags__link">#learning</a>
+                <a href="#" class="tags__link">#HR</a>
+                <a href="#" class="tags__link">#self-development</a>
+              </div>
+            </div>
+
+            <div class="share">
+              <span class="share__title">Share:</span>
+              <div class="social">
+                <ng-container *ngFor="let socialItem of socialItems(socialArticleArr); let i = index">
+                  <ng-container *ngIf="i <= 10">
+                    <a href="#" class="social__link social__link_shift">
+                      <button class="social__{{socialItem.name}}"></button>
+                    </a>
+                  </ng-container>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <aside class="sidebar">
+        <form action="" class="sidebar__search">
+          <input type="text" class="sidebar__input" placeholder="Search blog...">
+          <button class="sidebar__button" for="sidebar__search"></button>
+        </form>
+
+        <div class="sidebar__main">
+
+          <div class="author">
+            <h2 class="author__title">Author</h2>
+
+
+
+            <div class="author__main">
+              <div class="author__graphics">
+                <img src="./assets/images/author/author.svg" alt="">
+              </div>
+              <div class="author__content">
+                <p class="author__main-title">Kristin Watson</p>
+                <p class="author__main-paragraph">Curator of Marketing Course</p>
+
+                <div class="social">
+                  <ng-container *ngFor="let socialItem of socialItems(socialAuthorArr); let i = index">
+                    <ng-container *ngIf="i <= 10">
+                      <a href="#" class="social__link social__link_shift">
+                        <button class="social__{{socialItem.name}}"></button>
+                      </a>
+                    </ng-container>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="trending-articles">
+            <h2 class="trending-articles__title">Trending Articles</h2>
+
+            <a href="#" class="trending-articles__link">
+              <article class="trending-articles__article">
+
+                <div class="trending-articles__graphics">
+                  <img src="./assets/images/articles/1.svg" alt="">
+                </div>
+
+                <div class="trending-articles__main">
+                  <div class="date-info">
+                    <span class="date-info__date">September 4, 2020</span>
+                  </div>
+                  <p class="trending-articles__paragraph">What is traffic arbitrage and does it really make money?</p>
+                </div>
+
+
+              </article>
+            </a>
+
+            <a href="#" class="trending-articles__link">
+              <article class="trending-articles__article">
+
+                <div class="trending-articles__graphics">
+                  <img src="./assets/images/articles/2.svg" alt="">
+                </div>
+
+                <div class="trending-articles__main">
+                  <div class="date-info">
+                    <span class="date-info__date">July 15, 2020</span>
+                  </div>
+                  <p class="trending-articles__paragraph">Startup: how to build a team that will live longer than a
+                    year</p>
+                </div>
+              </article>
+            </a>
+
+            <a href="#" class="trending-articles__link">
+              <article class="trending-articles__article">
+
+                <div class="trending-articles__graphics">
+                  <img src="./assets/images/articles/3.svg" alt="">
+                </div>
+                <div class="trending-articles__main">
+                  <div class="date-info">
+                    <span class="date-info__date">August 2, 2020</span>
+                  </div>
+                  <p class="trending-articles__paragraph">What to do if you want to get feedback on the product</p>
+                </div>
+              </article>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="sidebar__footer">
+          <div class="tags tags_row">
+            <h2 class="tags__title sidebar__decoration">Tags</h2>
+
+            <div class="tags__main">
+              <a href="#" class="tags__link">#marketing</a>
+              <a href="#" class="tags__link">#recruiting</a>
+              <a href="#" class="tags__link">#coding</a>
+              <a href="#" class="tags__link">#learning</a>
+              <a href="#" class="tags__link">#HR</a>
+              <a href="#" class="tags__link">#self-development</a>
+            </div>
+
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="subscribe-section">
+  <div class="wrapper">
+    <div class="subscribe-section__inner">
+      <div class="subscribe-section__graphics">
+
+      </div>
+
+      <div class="subscribe-section__content">
+        <h2 class="subscribe-section__content-title">Want to get the best articles weekly?
+          Subscribe to our newsletter!</h2>
+
+        <form action="subscribe-section__form">
+          <input type="email">
+          <button class="btn">Subscribe</button>
+          <label class="checkbox style-a">
+            <input type="checkbox" checked="checked">
+            <div class="checkbox__checkmark"></div>
+            <div class="checkbox__text">I agree to receive communications from Createx Online School</div>
+          </label>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+

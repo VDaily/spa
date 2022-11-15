@@ -9,49 +9,42 @@ export class SocialItemsService {
     {
       name: 'facebook',
       file: 'fb.svg',
-      options: 'both'
     },
     {
       name: 'google',
       file: 'google.svg',
-      options: 'authorization'
     },
     {
       name: 'twitter',
       file: 'twitter.svg',
-      options: 'both'
     },
     {
       name: 'youtube',
       file: 'youtube.svg',
-      options: 'no'
-
     },
     {
       name: 'telegram',
-      file: 'telegram.svg',
-      options: 'no'
+      file: 'telegram.svg'
     },
     {
       name: 'instagram',
-      file: 'instagram.svg',
-      options: 'no'
+      file: 'instagram.svg'
     },
     {
       name: 'inblog',
-      file: 'inblog.svg',
-      options: 'both'
+      file: 'inblog.svg'
     }
   ];
   constructor() { }
 
-  get socialItems() {
-    return this.social;
+  socialItems(socialArray: string[]) {
+    return this.social.filter((socialItem) => {
+      return socialArray.includes(socialItem.name);
+    })
   }
 }
 
 interface SocialItems {
   name: string;
   file: string;
-  options: 'authorization' | 'both' | 'no';
 }

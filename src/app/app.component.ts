@@ -9,14 +9,16 @@ import { SocialItemsService } from './services/socialItems/social-items.service'
 })
 export class AppComponent implements OnInit{
   title = 'spa';
+  socialFooterArr = ['facebook', 'twitter', 'youtube', 'telegram', 'instagram', 'inblog'];
   constructor(
     private openModal: StateModalWindowService,
     private social: SocialItemsService
   ) { }
   ngOnInit() {
+
   }
-  get socialItems() {
-    return this.social.socialItems;
+  socialItems(socialItems: string[]) {
+    return this.social.socialItems(socialItems);
   }
   get stateModalWindow() {
     return this.openModal.stateModalWindow;

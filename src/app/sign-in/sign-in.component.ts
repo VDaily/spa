@@ -8,15 +8,15 @@ import { SocialItemsService } from '../services/socialItems/social-items.service
 })
 export class SignInComponent implements OnInit {
   isHiddenPass = true;
-
+  socialLogIn = ['facebook', 'google', 'twitter', 'inblog'];
   constructor(private social: SocialItemsService) {
 
   }
   ngOnInit(): void {
   }
-
-  get socialItems() {
-    return this.social.socialItems;
+  socialItems(socialItems: string[]) {
+    return this.social.socialItems(socialItems);
   }
+
 
 }

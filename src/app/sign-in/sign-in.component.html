@@ -47,14 +47,12 @@
     <div class="sign-in__footer">
       <div class="sign-in__footer-inner">
         <p class="sign-in__footer-paragraph">Or sign in with</p>
-        <div class="social">
-          <ng-container *ngFor="let item of socialItems; let i = index">
+        <div class="social sign-in_decoration">
+          <ng-container *ngFor="let item of socialItems(socialLogIn); let i = index">
             <ng-container *ngIf="i <= 10">
-              <ng-container *ngIf="item.options !== 'no'">
-                <a href="#" class="social__link social__link_shift">
-                  <button class="social__{{item.name}}"></button>
-                </a>
-              </ng-container>
+              <a href="#" class="social__link social__link_shift">
+                <button class="social__{{item.name}}"></button>
+              </a>
             </ng-container>
           </ng-container>
 
