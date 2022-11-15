@@ -8,24 +8,15 @@ import { SocialItemsService } from '../services/socialItems/social-items.service
 })
 export class SignInComponent implements OnInit {
   isHiddenPass = true;
-  @ViewChild('inputPassOne') inputPassOne!: ElementRef<HTMLInputElement>;
+
   constructor(private social: SocialItemsService) {
 
   }
-
   ngOnInit(): void {
   }
 
   get socialItems() {
     return this.social.socialItems;
   }
-  changeHiddenPass() {
-    this.isHiddenPass = !this.isHiddenPass;
-    let inputPassOne = this.inputPassOne.nativeElement;
-    if(inputPassOne.type === "text") {
-      inputPassOne.type = "password";
-    } else {
-      inputPassOne.type = "text";
-    }
-  }
+
 }

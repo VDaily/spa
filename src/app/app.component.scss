@@ -99,8 +99,7 @@
   &__column {
     &-title {
       font-size: 16px;
-      margin: 0;
-      margin-bottom: 20px;
+      margin: 0 0 20px 0;
       text-transform: uppercase;
     }
   }
@@ -273,7 +272,7 @@
     }
 
     &__icon:before {
-      top: 0px;
+      top: 0;
     }
 
     &__icon:after {
@@ -282,7 +281,6 @@
 
     &__icon span {
       top: 50%;
-      //transform: scale(1) translate(0px, -50%);
     }
 
     &__list {
@@ -356,8 +354,8 @@
   }
   .footer__column-form {
     display: block;
-    grid-columns-start: 1;
-    grid-columns-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
   }
 }
 

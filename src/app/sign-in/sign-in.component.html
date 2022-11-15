@@ -4,7 +4,7 @@
     <div class="sign-in__header">
       <h2 class="sign-in__header-title">Sign in</h2>
       <p class="sign-in__header-paragraph">Sign in to your account using email and password provided during registration.</p>
-      <span class="sign-in__close"><img src="../../assets/images/modal/close.svg" alt=""></span>
+      <span class="sign-in__close"><img src="../../assets/images/modal/close.svg" alt="закрыть модальное окно"></span>
     </div>
     <div class="sign-in__main">
       <form action="" class="registation-form">
@@ -18,9 +18,9 @@
           <label for="registration-pass" class="registation-form__label" required>Password</label>
 
           <div class="registation-form__bind">
-            <input type="password" class="registation-form__input" id="registration-pass" #inputPassOne placeholder="Your password" required>
-            <span class="registation-form__eye" (click)="changeHiddenPass()">
-              <img class="registation-form__img" src="../../assets/images/register/{{isHiddenPass ? 'eye.png' : 'eye-open.svg'}}" alt="">
+            <input type="{{isHiddenPass ? 'password' : 'text'}}" class="registation-form__input" id="registration-pass" #inputPassOne placeholder="Your password" required>
+            <span class="registation-form__eye" (click)="isHiddenPass = !isHiddenPass">
+              <img class="registation-form__img" src="../../assets/images/register/{{isHiddenPass ? 'eye.png' : 'eye-open.svg'}}" alt="глаз состояния">
             </span>
           </div>
 

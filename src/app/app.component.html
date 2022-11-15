@@ -89,7 +89,6 @@
             </g>
           </svg>
         </button>
-        <!-- <img class="authorization__logo" src="" alt=""> -->
 
         <div class="authorization__wrapper">
           <div class="authorization__item">
@@ -105,7 +104,7 @@
 </header>
 
 <main class="main">
-  <app-contacts></app-contacts>
+  <app-sign-up></app-sign-up>
 </main>
 
 
@@ -157,13 +156,10 @@
           <ng-container *ngFor="let item of socialItems; let i = index">
             <ng-container *ngIf="i <= 10">
               <ng-container *ngIf="item.options !== 'authorization'">
-
                 <a href="#" class="social__link social__link_shift">
                   <button class="social__{{item.name}}"></button>
                 </a>
-<!--              <img src="../assets/images/social/{{item.file}}" alt="{{item.name}} icon">-->
-
-              </ng-container>
+<!-              </ng-container>
             </ng-container>
           </ng-container>
         </div>
@@ -219,7 +215,7 @@
   <div class="copyright">
     <div class="wrapper">
       <div class="copyright__text">
-        <span>© All rights reserved.</span><span>Made with  <img src="../assets/images/footer/hearth.svg" alt=""></span><span> by Createx Studio </span>
+        <span>© All rights reserved.</span><span>Made with  <img src="../assets/images/footer/hearth.svg" alt="изображение сердца"></span><span> by Createx Studio </span>
       </div>
     </div>
   </div>
