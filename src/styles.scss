@@ -2,18 +2,23 @@
 @import 'normalize.scss';
 
 
-
+html {
+  height: 100%;
+}
 
 body {
   font-family: 'Lato', sans-serif;
   color: #1E212C;
   position: relative;
   font-size: 16px;
+  margin: 0;
+  height: 100%
 }
 body.modal-open {
   overflow: hidden;
   position: fixed;
 }
+
 ul {
   list-style-type: none;
 }
@@ -233,13 +238,3 @@ a {
 
 
 // media-queries
-
-
-
-
-
-
-
-
-
-
