@@ -37,7 +37,7 @@ export class BlogComponent implements OnInit {
       isPodcast: false,
       date: 'August 8, 2020',
       title: 'Should you choose a creative profession if you are attracted to creativity?',
-      content: 'Curabitur nisl tincidunt eros venenatis vestibulum ac placerat.'
+      content: 'Curabitur nisl tincidunt eros venenatis vestibulunisl tincidunt eros venenatis vestibulu'
     }
   ]
 

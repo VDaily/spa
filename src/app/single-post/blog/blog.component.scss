@@ -47,6 +47,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
+    margin-bottom: 4em;
   }
   &__more-content {
     display: flex;
