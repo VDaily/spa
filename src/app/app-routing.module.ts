@@ -13,6 +13,10 @@ const routes: Routes = [
     path: 'single-post',
     component: SinglePostComponent,
     data: { title: 'Our blog' },
+  },
+  {
+    path: '**',
+    component: SinglePostComponent,
   }
 ];
 

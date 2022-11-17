@@ -2,6 +2,10 @@
 /*
   contact-info styles
 */
+.container {
+  width: 1000px;
+  height: 500px;
+}
 .contact-info {
   margin-bottom: 92px;
 
@@ -35,6 +39,9 @@
 
   &__link_shift {
     margin-right: 38px;
+  }
+  &__column {
+    flex-direction: column;
   }
 }
 .section__title {

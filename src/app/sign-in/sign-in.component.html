@@ -3,8 +3,10 @@
 
     <div class="sign-in__header">
       <h2 class="sign-in__header-title">Sign in</h2>
-      <p class="sign-in__header-paragraph">Sign in to your account using email and password provided during registration.</p>
-      <span class="sign-in__close"><img src="../../assets/images/modal/close.svg" alt="закрыть модальное окно"></span>
+      <p class="sign-in__header-paragraph">Sign in to your account using email and password provided during
+        registration.</p>
+      <span (click)="closeDialogWindow()" class="sign-in__close"><img src="../../assets/images/modal/close.svg"
+                                                                      alt="закрыть модальное окно"></span>
     </div>
     <div class="sign-in__main">
       <form action="" class="registation-form">
@@ -18,9 +20,12 @@
           <label for="registration-pass" class="registation-form__label" required>Password</label>
 
           <div class="registation-form__bind">
-            <input type="{{isHiddenPass ? 'password' : 'text'}}" class="registation-form__input" id="registration-pass" #inputPassOne placeholder="Your password" required>
+            <input type="{{isHiddenPass ? 'password' : 'text'}}" class="registation-form__input" id="registration-pass"
+                   #inputPassOne placeholder="Your password" required>
             <span class="registation-form__eye" (click)="isHiddenPass = !isHiddenPass">
-              <img class="registation-form__img" src="../../assets/images/register/{{isHiddenPass ? 'eye.png' : 'eye-open.svg'}}" alt="глаз состояния">
+              <img class="registation-form__img"
+                   src="../../assets/images/register/{{isHiddenPass ? 'eye.png' : 'eye-open.svg'}}"
+                   alt="глаз состояния">
             </span>
           </div>
 
@@ -31,8 +36,8 @@
             <input type="checkbox" checked="checked">
             <div class="checkbox__checkmark"></div>
             <div class="checkbox__text">Keep me signed in</div>
-<!--            <input type="checkbox" class="checkbox rememberUser__input" id="rememberUser-agree">-->
-<!--            <label for="rememberUser-agree" class="rememberUser__label">Keep me signed in</label>-->
+            <!--            <input type="checkbox" class="checkbox rememberUser__input" id="rememberUser-agree">-->
+            <!--            <label for="rememberUser-agree" class="rememberUser__label">Keep me signed in</label>-->
           </label>
 
           <a href="#" class="sign-in__forgot-link">Forgot password?</a>
@@ -48,14 +53,15 @@
       <div class="sign-in__footer-inner">
         <p class="sign-in__footer-paragraph">Or sign in with</p>
         <div class="social sign-in_decoration">
-          <ng-container *ngFor="let item of socialItems(socialLogIn); let i = index">
-            <ng-container *ngIf="i <= 10">
-              <a href="#" class="social__link social__link_shift">
-                <button class="social__{{item.name}}"></button>
-              </a>
+          <div class="social__links sign-in__links">
+            <ng-container *ngFor="let item of socialItems(socialLogIn); let i = index">
+              <ng-container *ngIf="i <= 10">
+                <a href="#" class="social__link social__link_shift">
+                  <button class="social__{{item.name}}"></button>
+                </a>
+              </ng-container>
             </ng-container>
-          </ng-container>
-
+          </div>
         </div>
       </div>
     </div>

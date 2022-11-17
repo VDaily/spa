@@ -1,3 +1,12 @@
+// logo styles
+
+.logo {
+  width: 100%;
+  &__icon {
+    width: 130px;
+    height: 22px;
+  }
+}
 /*
   header styles
 */
@@ -64,6 +73,59 @@
   }
 }
 
+// authorization styles
+.authorization {
+  display: flex;
+  margin-right: 50px;
+  align-items: center;
+
+  &__wrapper {
+    //white-space: nowrap;
+    height: 100%;
+    position: relative;
+  }
+
+  &__wrapper:before {
+    // white-space: nowrap;
+    content: "";
+    background: url('../../assets/images/header/human.svg') no-repeat;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -22px;
+  }
+
+  &__btn_disabled {
+    display: none;
+  }
+
+  &__btn_shift {
+    margin-right: 2.8em;
+  }
+  &__item {
+    white-space: nowrap;
+  }
+  &__link {
+    color: #1E212C;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  &__link:hover {
+    text-decoration: underline;
+  }
+
+  &__span {
+    padding: 0 5px;
+  }
+  &__modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
 
 //Media queries
 
@@ -119,6 +181,13 @@
 
     &__item {
       display: none;
+    }
+    &__modal {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      display: block;
     }
   }
 }

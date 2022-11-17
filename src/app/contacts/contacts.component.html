@@ -21,21 +21,27 @@
           </div>
         </address>
 
-        <div class="social">
+        <div class="social contact-info__column">
           <p class="social__paragraph">Follow us:</p>
-          <ng-container *ngFor="let item of socialItems(socialContactsArr); let i = index">
-            <ng-container *ngIf="i <= 10">
-              <a href="#" class="social__link contact-info__link_shift">
-                <button class="social__{{item.name}}"></button>
-              </a>
+          <div class="social__links">
+            <ng-container *ngFor="let item of socialItems(socialContactsArr); let i = index">
+              <ng-container *ngIf="i <= 10">
+                <a href="#" class="social__link contact-info__link_shift">
+                  <button class="social__{{item.name}}"></button>
+                </a>
+              </ng-container>
             </ng-container>
-          </ng-container>
+          </div>
 
         </div>
       </div>
 
       <div class="contact-info__graphics">
-        <div class="contact-info__map" id="map"></div>
+        <div class="contact-info__map">
+          <ya-map [center]="[55.796557, 49.108112]" [zoom]="17">
+            <ya-placemark [geometry]="[55.796557, 49.108112]"></ya-placemark>
+          </ya-map>
+        </div>
       </div>
     </div>
   </div>
@@ -58,8 +64,8 @@
               <input type="text" class="form-contact__input" id="firstName" placeholder="Your first name" required>
             </div>
             <div class="form-contact__row">
-              <label for="email" class="form-contact__label field-required">Email</label>
-              <input type="email" class="form-contact__input" id="email" placeholder="Your working email" required>
+              <label for="form-contact-email" class="form-contact__label field-required">Email</label>
+              <input type="email" class="form-contact__input" id="form-contact-email" placeholder="Your working email" required>
             </div>
 
           </div>

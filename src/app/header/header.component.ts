@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { StateModalWindowService } from '../services/stateModalWindow/state-modal-window.service';
-import { MatDialog } from "@angular/material/dialog";
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import {SignInComponent} from "../sign-in/sign-in.component";
 import {SignUpComponent} from "../sign-up/sign-up.component";
+import {MatIconRegistry} from "@angular/material/icon";
+import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-header',
@@ -13,8 +15,15 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private openModal: StateModalWindowService,
-    private matDialog: MatDialog
-  ) { }
+    private matDialog: MatDialog,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer,
+  ) {
+    this.matIconRegistry.addSvgIcon(
+      'logo',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/images/logo/logo.svg')
+    );
+  }
 
   ngOnInit(): void {
   }

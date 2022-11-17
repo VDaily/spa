@@ -1,4 +1,12 @@
+// logo styles
 
+.logo {
+  width: 100%;
+  &__icon {
+    width: 130px;
+    height: 22px;
+  }
+}
 /*
   footer styles
 */
@@ -38,6 +46,11 @@
   }
 
 }
+.information-blog {
+
+}
+
+
 
 .footer__inner {
   display: grid;

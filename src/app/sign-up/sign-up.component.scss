@@ -9,17 +9,17 @@
   z-index: 1;
   overflow: auto;
   font-size: 14px;
-  //transform: translate(-50%, 0);
   background: rgba(0, 0, 0, .8);
   &__inner {
     max-width: 486px;
-    padding: 3em 0;
+    padding: 2.5em 0;
     background: #FFFFFF;
     border: 1px solid #E5E8ED;
     box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16), 0px 26px 24px -10px rgba(30, 33, 44, 0.1), 0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
     border-radius: 4px;
     box-sizing: border-box;
     margin: auto;
+
   }
   &__header {
     position: relative;
@@ -38,7 +38,7 @@
   &__close {
     position: absolute;
     right: 2em;
-    top: -1em;
+    top: -.3em;
     cursor: pointer;
   }
   // main styles
@@ -87,7 +87,9 @@
   &_decoration {
     justify-content: center;
   }
-
+  &__links {
+    justify-content: center;
+  }
 }
 
 //registation-form styles
@@ -97,11 +99,11 @@
 
   &__label {
     display: block;
-    margin: .7em 0;
+    margin: .5em 0;
   }
   &__input {
     width: 100%;
-    padding: 1em;
+    padding: .9em;
     background: #FFFFFF;
 
     border: 1px solid #D7DADD;
