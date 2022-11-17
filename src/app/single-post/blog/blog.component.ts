@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import SwiperCore from 'swiper';
+
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
@@ -46,10 +46,5 @@ export class BlogComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onSwiper([swiper]: any) {
-    console.log(swiper);
-  }
-  onSlideChange() {
-    console.log('slide change');
-  }
+
 }

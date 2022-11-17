@@ -10,14 +10,8 @@
           <span class="blog__arrows-right"></span>
         </div>
       </div>
-
-
       <div class="blog__articles">
-        <swapper [slidesPerView]="3" [spaceBetween]="50"
-                 (swiper)="onSwiper($event)"
-                 (slideChange)="onSlideChange()">
 
-        </swapper>
           <ng-container *ngFor="let article of blogArticlesArr">
             <app-blog-article [article]="article"></app-blog-article>
           </ng-container>
@@ -27,7 +21,7 @@
 
       <div class="blog__more-content">
         <h2 class="blog__more-content-title">Do you want more articles, podcasts and videos?</h2>
-        <button class="btn">Go to blog</button>
+        <button class="btn"><a href="#" class="blog__btn-link">Go to blog</a></button>
       </div>
 
     </div>

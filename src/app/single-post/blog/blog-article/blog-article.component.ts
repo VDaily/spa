@@ -10,6 +10,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class BlogArticleComponent implements OnInit {
   @Input() article: any;
+
+
   constructor() { }
 
   ngOnInit(): void {
