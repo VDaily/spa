@@ -5,7 +5,7 @@
       <h2 class="sign-in__header-title">Sign in</h2>
       <p class="sign-in__header-paragraph">Sign in to your account using email and password provided during
         registration.</p>
-      <span (click)="closeDialogWindow()" class="sign-in__close"><img src="../../assets/images/modal/close.svg"
+      <span (click)="closeDialogWindow()" class="sign-in__close"><img src="./assets/images/modal/close.svg"
                                                                       alt="закрыть модальное окно"></span>
     </div>
     <div class="sign-in__main">
@@ -24,7 +24,7 @@
                    #inputPassOne placeholder="Your password" required>
             <span class="registation-form__eye" (click)="isHiddenPass = !isHiddenPass">
               <img class="registation-form__img"
-                   src="../../assets/images/register/{{isHiddenPass ? 'eye.png' : 'eye-open.svg'}}"
+                   src="./assets/images/register/{{isHiddenPass ? 'eye.png' : 'eye-open.svg'}}"
                    alt="глаз состояния">
             </span>
           </div>

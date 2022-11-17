@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   ) {
     this.matIconRegistry.addSvgIcon(
       'logo',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/images/logo/logo.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/images/logo/logo.svg')
     );
   }
 

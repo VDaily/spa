@@ -16,7 +16,7 @@ export class FooterComponent implements OnInit {
   ) {
     this.matIconRegistry.addSvgIcon(
     'logoWhite',
-    this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/images/logo/logoWhite.svg')
+    this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/images/logo/logoWhite.svg')
   );
   }
 

@@ -5,7 +5,7 @@
       <h2 class="sign-up__header-title">Sign Up</h2>
       <p class="sign-up__header-paragraph">Registration takes less than a minute but gives you full control over your
         studying.</p>
-      <span class="sign-up__close" (click)="closeDialogWindow()"><img src="../../assets/images/modal/close.svg"
+      <span class="sign-up__close" (click)="closeDialogWindow()"><img src="./assets/images/modal/close.svg"
                                                                       alt="закрыть модальное окно"></span>
     </div>
     <div class="sign-up__main">
@@ -42,7 +42,7 @@
                    id="registration-passAgain" placeholder="Your password again" required>
             <span class="registation-form__eye" (click)="isHiddenPassAgain = !isHiddenPassAgain">
               <img class="registation-form__img"
-                   src="../../assets/images/register/{{isHiddenPassAgain ? 'eye.png' : 'eye-open.svg'}}"
+                   src="./assets/images/register/{{isHiddenPassAgain ? 'eye.png' : 'eye-open.svg'}}"
                    alt="глаз состояния">
             </span>
           </div>
