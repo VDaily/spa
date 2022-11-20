@@ -1,0 +1,26 @@
+//Trending Articles styles
+
+.trending-articles {
+  &__link {
+    color: #1E212C;
+  }
+
+  &__title {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+
+  &__article {
+    display: flex;
+    margin-bottom: 1.5em;
+  }
+
+  &__graphics {
+    margin-right: 1.2em;
+  }
+
+  &__paragraph {
+    margin: 0;
+    font-weight: 700;
+  }
+}

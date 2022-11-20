@@ -1,9 +1,9 @@
 <article class="blog-article">
   <mat-card class="blog-article-inner">
     <a href="#">
-      <img colorful mat-card-image src="./assets/images/single-post/blog/{{article.name}}" alt="{{article.alt}}">
+      <img colorful mat-card-image [src]="srcImg + article.name" [alt]="article.alt">
       <div class="categoryName">
-        <span class="categoryName__title {{article.isPodcast ? 'categoryName__podcast' : ''}}">{{article.isPodcast ? 'Podcast' : 'Article'}}</span>
+        <span class="categoryName__title" [ngClass]="articleTypeObj.className">{{articleTypeObj.title}}</span>
       </div>
 
       <div class="date-info blog-article_appearance blog-article__date-info">
@@ -28,29 +28,9 @@
     </mat-card-content>
     <mat-card-actions>
       <a href="#">
-        <button mat-button class="blog-article__btn">{{article.isPodcast ? "Listen" : "Read"}}</button>
+        <button mat-button class="blog-article__btn">{{articleTypeObj.button}}</button>
       </a>
     </mat-card-actions>
   </mat-card>
-  <!--<div class="blog-article__inner">
-    <a href="">
-      <div class="blog-article__graphics">
-        <img src="./assets/images/single-post/blog/{{article.name}}" alt="{{article.alt}}">
-      </div>
-    </a>
 
-
-    <div class="blog-article__additional-info">
-
-    </div>
-
-    <h2 class="blog-article__title"><a href="">{{article.title}}</a></h2>
-    <p class=blog-article__description>
-      {{article.content | slice:0:100}}
-      {{article.content.length > 100 ? "...": ""}}
-    </p>
-  </div>
-
-
-  <a href="#">Listen</a>-->
 </article>

@@ -12,7 +12,7 @@
 
       <div class="author__main">
         <div class="author__graphics">
-          <img src="./assets/images/author/author.svg" alt="">
+          <img [src]="pictures.author.src" [alt]="pictures.author.alt">
         </div>
         <div class="author__content">
           <p class="author__main-title">Kristin Watson</p>
@@ -22,7 +22,7 @@
             <ng-container *ngFor="let socialItem of socialItems(socialAuthorArr); let i = index">
               <ng-container *ngIf="i <= 10">
                 <a href="#" class="social__link social__link_shift">
-                  <button class="social__{{socialItem.name}}"></button>
+                  <button [ngClass]="'social__' + socialItem.name"></button>
                 </a>
               </ng-container>
             </ng-container>
@@ -31,59 +31,7 @@
       </div>
     </div>
 
-    <div class="trending-articles">
-      <h2 class="trending-articles__title">Trending Articles</h2>
-
-      <a href="#" class="trending-articles__link">
-        <article class="trending-articles__article">
-
-          <div class="trending-articles__graphics">
-            <img src="./assets/images/articles/1.svg" alt="">
-          </div>
-
-          <div class="trending-articles__main">
-            <div class="date-info">
-              <span class="date-info__date">September 4, 2020</span>
-            </div>
-            <p class="trending-articles__paragraph">What is traffic arbitrage and does it really make money?</p>
-          </div>
-
-
-        </article>
-      </a>
-
-      <a href="#" class="trending-articles__link">
-        <article class="trending-articles__article">
-
-          <div class="trending-articles__graphics">
-            <img src="./assets/images/articles/2.svg" alt="">
-          </div>
-
-          <div class="trending-articles__main">
-            <div class="date-info">
-              <span class="date-info__date">July 15, 2020</span>
-            </div>
-            <p class="trending-articles__paragraph">Startup: how to build a team that will live longer than a
-              year</p>
-          </div>
-        </article>
-      </a>
-
-      <a href="#" class="trending-articles__link">
-        <article class="trending-articles__article">
-
-          <div class="trending-articles__graphics">
-            <img src="./assets/images/articles/3.svg" alt="">
-          </div>
-          <div class="trending-articles__main">
-            <div class="date-info">
-              <span class="date-info__date">August 2, 2020</span>
-            </div>
-            <p class="trending-articles__paragraph">What to do if you want to get feedback on the product</p>
-          </div>
-        </article>
-      </a>
-    </div>
+    <app-trending-articles></app-trending-articles>
   </div>
 
 

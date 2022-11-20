@@ -14,7 +14,6 @@ import {DomSanitizer} from "@angular/platform-browser";
 export class HeaderComponent implements OnInit {
 
   constructor(
-    private openModal: StateModalWindowService,
     private matDialog: MatDialog,
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
@@ -23,33 +22,19 @@ export class HeaderComponent implements OnInit {
       'logo',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/images/logo/logo.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'message',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/images/header/message.svg')
+    );
   }
 
   ngOnInit(): void {
   }
-  get stateModalWindow() {
-    return this.openModal.stateModalWindow;
-  }
 
-  set stateModalWindow(state) {
-    this.openModal.stateModalWindow = state;
-  }
-  changeStateModalWindow() {
-    this.stateModalWindow = !this.stateModalWindow;
-    let bodyElement = document.body;
-
-
-    if(this.stateModalWindow) {
-      bodyElement.classList.add('modal-open');
-    } else {
-      bodyElement.classList.remove('modal-open');
-    }
-  }
-
-  onOpenDialogSignInClick() {
+  onOpenDialogSignInClick():void {
     this.matDialog.open(SignInComponent);
   }
-  onOpenDialogSignUpClick() {
+  onOpenDialogSignUpClick():void {
     this.matDialog.open(SignUpComponent);
   }
 }

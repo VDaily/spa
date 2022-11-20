@@ -12,7 +12,7 @@ export class BlogComponent implements OnInit {
       name: 'article-img1.svg',
       alt: 'Image minimalism',
       categoryName: 'Design',
-      isPodcast: true,
+      type: 'Podcast',
       date: 'August 3, 2020',
       timeSpent: '36 min',
       title: 'What are color profiles and how they work in graphic design',
@@ -24,7 +24,7 @@ export class BlogComponent implements OnInit {
       name: 'article-img2.svg',
       alt: 'Laptop picture',
       categoryName: 'Development',
-      isPodcast: false,
+      type: 'Article',
       date: 'September 1, 2020',
       title: 'How to choose the first programming language for a beginner',
       content: 'Turpis sed at magna laoreet gravida consequat tortor placerat. Gravida vitae aliquet enim egestaslaoreet gravida consequat tortor placerat. Gravida vitae aliquet enim egestas '
@@ -34,7 +34,7 @@ export class BlogComponent implements OnInit {
       name: 'article-img3.svg',
       alt: 'The guy with the big hat',
       categoryName: 'Design',
-      isPodcast: false,
+      type: 'Article',
       date: 'August 8, 2020',
       title: 'Should you choose a creative profession if you are attracted to creativity?',
       content: 'Curabitur nisl tincidunt eros venenatis vestibulunisl tincidunt eros venenatis vestibulu'

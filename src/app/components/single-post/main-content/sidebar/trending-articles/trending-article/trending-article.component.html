@@ -1,0 +1,16 @@
+<a href="#" class="trending-articles__link">
+  <article class="trending-articles__article">
+
+    <div class="trending-articles__graphics">
+      <img [src]="srcImg + article.name" [alt]="article.alt">
+    </div>
+
+    <div class="trending-articles__main">
+      <div class="date-info">
+        <span class="date-info__date">{{article.date}}</span>
+      </div>
+      <p class="trending-articles__paragraph">{{article.title}}</p>
+    </div>
+
+  </article>
+</a>

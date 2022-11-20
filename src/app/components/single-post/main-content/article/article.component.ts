@@ -7,6 +7,12 @@ import { SocialItemsService } from '../../../../services/socialItems/social-item
 })
 export class ArticleComponent implements OnInit {
   socialArticleArr = ['facebook', 'twitter', 'inblog'];
+  pictures = {
+    article: {
+      src: "./assets/images/single-post/article/image.svg",
+      alt: "Стол с клавиатурой и очками. Заголовок статьи."
+    }
+  }
   constructor(
     private social: SocialItemsService
   ) { }

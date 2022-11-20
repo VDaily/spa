@@ -29,6 +29,8 @@ import { SwiperModule } from "swiper/angular";
 import { ColorfulDirective } from './directives/colorful/colorful.directive';
 
 import { FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { TrendingArticlesComponent } from './components/single-post/main-content/sidebar/trending-articles/trending-articles.component';
+import { TrendingArticleComponent } from './components/single-post/main-content/sidebar/trending-articles/trending-article/trending-article.component';
 
 
 const mapConfig: YaConfig = {
@@ -52,6 +54,8 @@ const mapConfig: YaConfig = {
     BlogComponent,
     BlogArticleComponent,
     ColorfulDirective,
+    TrendingArticlesComponent,
+    TrendingArticleComponent,
   ],
   imports: [
     BrowserModule,

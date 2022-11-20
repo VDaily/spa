@@ -190,16 +190,12 @@ a {
     background-color: #787A80;
     border: none;
     cursor: pointer;
+
+    &:hover {
+      background-color: #FF3F3A;
+    }
   }
-  &__facebook:hover,
-  &__google:hover,
-  &__inblog:hover,
-  &__instagram:hover,
-  &__telegram:hover,
-  &__twitter:hover,
-  &__youtube:hover{
-    background-color: #FF3F3A;
-  }
+
   &__facebook {
     mask: url("./assets/images/social/fb.svg") no-repeat center;
   }

@@ -1,3 +1,9 @@
+// mat
+.mat-icon {
+  min-width: 40px;
+  height: 100%;
+}
+
 // logo styles
 
 .logo {
@@ -94,7 +100,10 @@
     height: 30px;
     left: -22px;
   }
-
+  &__graphics {
+    width: 100%;
+    height: 100%;
+  }
   &__btn_disabled {
     display: none;
   }
@@ -140,7 +149,7 @@
     }
     &__btn-message {
       display: block;
-      padding: 0 35px;
+      padding: 0 20px;
       margin-right: 2.4em;
       position: relative;
     }

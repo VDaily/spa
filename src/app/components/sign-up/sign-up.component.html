@@ -5,8 +5,9 @@
       <h2 class="sign-up__header-title">Sign Up</h2>
       <p class="sign-up__header-paragraph">Registration takes less than a minute but gives you full control over your
         studying.</p>
-      <span class="sign-up__close" (click)="closeDialogWindow()"><img src="./assets/images/modal/close.svg"
-                                                                      alt="закрыть модальное окно"></span>
+      <span class="sign-up__close" (click)="closeDialogWindow()">
+        <img [src]="pictures.close.src" [alt]="pictures.close.alt">
+      </span>
     </div>
     <div class="sign-up__main">
       <form action="" class="registation-form">
@@ -24,12 +25,10 @@
           <label for="registration-pass" class="registation-form__label">Password</label>
 
           <div class="registation-form__bind">
-            <input type="{{isHiddenPass ? 'password' : 'type'}}" class="registation-form__input" id="registration-pass"
+            <input [type]="isHiddenPass ? 'password' : 'text'" class="registation-form__input" id="registration-pass"
                    placeholder="Your password" required>
-            <span class="registation-form__eye" (click)="isHiddenPass = !isHiddenPass">
-              <img class="registation-form__img"
-                   src="./assets/images/register/{{isHiddenPass ? 'eye.png' : 'eye-open.svg'}}"
-                   alt="глаз состояния">
+            <span class="registation-form__eye" (click)="changeIsHiddenPass()">
+              <img class="registation-form__img" [src]="currentEyeObj.src" [alt]="currentEyeObj.alt">
             </span>
           </div>
         </div>
@@ -38,12 +37,10 @@
           <label for="registration-passAgain" class="registation-form__label">Confirm Password</label>
 
           <div class="registation-form__bind">
-            <input type="{{isHiddenPassAgain ? 'password' : 'type'}}" class="registation-form__input"
+            <input [type]="isHiddenPassAgain ? 'password' : 'text'" class="registation-form__input"
                    id="registration-passAgain" placeholder="Your password again" required>
-            <span class="registation-form__eye" (click)="isHiddenPassAgain = !isHiddenPassAgain">
-              <img class="registation-form__img"
-                   src="./assets/images/register/{{isHiddenPassAgain ? 'eye.png' : 'eye-open.svg'}}"
-                   alt="глаз состояния">
+            <span class="registation-form__eye" (click)="changeIsHiddenPassAgain()">
+              <img class="registation-form__img" [src]="currentEyeObjAgain.src" [alt]="currentEyeObjAgain.alt">
             </span>
           </div>
         </div>
@@ -53,8 +50,6 @@
             <input type="checkbox" checked="checked">
             <div class="checkbox__checkmark"></div>
             <div class="checkbox__text">Remember</div>
-            <!--            <input type="checkbox" class="checkbox rememberUser__input" id="rememberUser-agree">-->
-            <!--            <label for="rememberUser-agree" class="rememberUser__label">Keep me signed in</label>-->
           </label>
 
         </div>
@@ -73,7 +68,7 @@
             <ng-container *ngFor="let item of socialItems(socialLogUp); let i = index">
               <ng-container *ngIf="i <= 10">
                 <a href="#" class="social__link social__link_shift">
-                  <button class="social__{{item.name}}"></button>
+                  <button [ngClass]="'social__' + item.name"></button>
                 </a>
               </ng-container>
             </ng-container>

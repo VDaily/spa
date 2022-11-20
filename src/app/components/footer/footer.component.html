@@ -19,7 +19,7 @@
             <ng-container *ngFor="let item of socialItems(socialFooterArr); let i = index">
               <ng-container *ngIf="i <= 10">
                 <a href="#" class="social__link social__link_shift">
-                  <button class="social__{{item.name}}"></button>
+                  <button [ngClass]="'social__' + item.name"></button>
                 </a>
               </ng-container>
             </ng-container>
@@ -53,10 +53,10 @@
         <h2 class="footer__column-title">Contact Us</h2>
         <ul class="footer__list">
           <li class="footer__list-item">
-            <a class="footer__list-link footer_visibility" href="tel:+74055550128">(405) 555-0128</a>
+            <a class="footer__list-link footer_visibility" [href]="'tel:' + phoneNumber">{{phoneNumber}}</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link footer_visibility" href="mailto: hello@createx.com">hello@createx.com</a>
+            <a class="footer__list-link footer_visibility" [href]="'mailto:' + email">{{email}}</a>
           </li>
         </ul>
       </div>
@@ -77,8 +77,11 @@
   <div class="copyright">
     <div class="wrapper">
       <div class="copyright__text">
-        <span>© All rights reserved.</span><span>Made with  <img src="./assets/images/footer/hearth.svg"
-                                                                 alt="изображение сердца"></span><span> by Createx Studio </span>
+        <span>© All rights reserved.</span>
+        <span>Made with
+          <img [src]="pictures.heart.src" [alt]="pictures.heart.alt">
+        </span>
+        <span> by Createx Studio</span>
       </div>
     </div>
   </div>

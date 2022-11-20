@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SocialItemsService } from '../../services/socialItems/social-items.service';
+import {SocialItem, SocialItemsService} from '../../services/socialItems/social-items.service';
 
 @Component({
   selector: 'app-contacts',
@@ -12,13 +12,22 @@ export class ContactsComponent implements OnInit {
   address = "2464 Royal Ln. Mesa, New Jersey 45463, USA";
   socialContactsArr = ['facebook', 'twitter', 'youtube', 'telegram', 'instagram', 'inblog'];
 
+  pictures = {
+    woman: {
+      src: "./assets/images/contact-us/woman.svg",
+      alt: "Изображение женщины. Изображение для декора"
+    }
+  }
+  Picture = {
+
+  }
+
   constructor(private social: SocialItemsService) {
 
   }
-  socialItems(socialItems: string[]) {
+  socialItems(socialItems: string[]): SocialItem[] {
     return this.social.socialItems(socialItems);
   }
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

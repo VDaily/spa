@@ -46,7 +46,7 @@ export class SocialItemsService {
 
 }
 
-interface SocialItem {
+export interface SocialItem {
   name: string;
   file: string;
 }

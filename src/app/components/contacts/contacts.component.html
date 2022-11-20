@@ -8,11 +8,11 @@
         <address class="address">
           <div class="address__content ">
             <p class="address__paragraph address__paragraph-mail">Talk to us:</p>
-            <a class="address__link address__mail" href="mailto:hello@createx.com">{{email}}</a>
+            <a class="address__link address__mail" [href]="'mailto:' + email">{{email}}</a>
           </div>
           <div class="address__content">
             <p class="address__paragraph address__paragraph-phone-number">Call us:</p>
-            <a class="address__link address__phone-number" href="tel:+7405550128">{{phoneNumber}}</a>
+            <a class="address__link address__phone-number" [href]="'tel:' + phoneNumber">{{phoneNumber}}</a>
           </div>
           <div class="address__content">
 
@@ -27,7 +27,7 @@
             <ng-container *ngFor="let item of socialItems(socialContactsArr); let i = index">
               <ng-container *ngIf="i <= 10">
                 <a href="#" class="social__link contact-info__link_shift">
-                  <button class="social__{{item.name}}"></button>
+                  <button [ngClass]="'social__' + item.name"></button>
                 </a>
               </ng-container>
             </ng-container>
@@ -51,7 +51,7 @@
   <div class="wrapper">
     <div class="contact-us__inner">
       <div class="contact-us__graphics">
-        <img class="contact-us__img" src="./assets/images/contact-us/woman.svg" alt="Изображение женщины. Изображение для декора">
+        <img class="contact-us__img" [src]="pictures.woman.src" [alt]="pictures.woman.alt">
       </div>
 
       <div class="contact-us__main">

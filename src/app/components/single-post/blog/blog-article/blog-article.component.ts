@@ -10,12 +10,32 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class BlogArticleComponent implements OnInit {
   @Input() article: any;
-
-
+  srcImg = "./assets/images/single-post/blog/";
+  articleTypeObj : TypeObj = {
+    className: "",
+    title: "Article",
+    button: "Read"
+  };
   constructor() { }
 
   ngOnInit(): void {
-
+    if(this.article.type === "Podcast") {
+      this.articleTypeObj = {
+        className: "categoryName__podcast",
+        title: "Podcast",
+        button: "Listen"
+      }
+    } else if(this.article.type === "Video") {
+      this.articleTypeObj = {
+        className: "categoryName__video",
+        title: "Video",
+        button: "Watch"
+      }
+    }
   }
-
+}
+interface TypeObj {
+  className: string;
+  title: "Podcast" | "Video" | "Article";
+  button: "Listen" | "Watch" | "Read";
 }

@@ -19,7 +19,7 @@
           <ng-container *ngFor="let socialItem of socialItems(socialArticleArr); let i = index">
             <ng-container *ngIf="i <= 10">
               <a href="#" class="social__link social__link_shift">
-                <button class="social__{{socialItem.name}}"></button>
+                <button [ngClass]="'social__' + socialItem.name"></button>
               </a>
             </ng-container>
           </ng-container>
@@ -31,7 +31,7 @@
 
   <div class="article__main">
     <div class="article__main-graphics">
-      <img class="article__img" src="./assets/images/single-post/article/image.svg" alt="изображение статьи">
+      <img class="article__img" [src]="pictures.article.src" [alt]="pictures.article.alt">
     </div>
 
 
@@ -101,7 +101,7 @@
         <ng-container *ngFor="let socialItem of socialItems(socialArticleArr); let i = index">
           <ng-container *ngIf="i <= 10">
             <a href="#" class="social__link social__link_shift">
-              <button class="social__{{socialItem.name}}"></button>
+              <button [ngClass]="'social__' + socialItem.name"></button>
             </a>
           </ng-container>
         </ng-container>

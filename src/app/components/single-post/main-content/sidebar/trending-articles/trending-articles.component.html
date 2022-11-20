@@ -1,0 +1,8 @@
+<div class="trending-articles">
+  <h2 class="trending-articles__title">Trending Articles</h2>
+
+    <ng-container *ngFor="let article of trendingArticlesArr">
+      <app-trending-article [article]="article"></app-trending-article>
+    </ng-container>
+
+</div>
