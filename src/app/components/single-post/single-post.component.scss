@@ -1,0 +1,29 @@
+.date-info {
+  color: #787A80;
+  &__date,
+  &__time-read {
+    position: relative;
+    padding-left: 1.5625em;
+    font-size: 0.875em;
+    white-space: nowrap;
+  }
+  &__date {
+    margin-right: 1.5em;
+  }
+  &__date:before,
+  &__time-read:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &__date:before {
+    background: url("../../../assets/images/articles/calendar.svg") no-repeat center;
+  }
+  &__time-read:before {
+    background: url("../../../assets/images/articles/clock.svg") no-repeat center;
+  }
+
+}

@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class SocialItemsService {
-  social: SocialItems[] = [
+  social: SocialItem[] = [
     {
       name: 'facebook',
       file: 'fb.svg',
@@ -35,16 +35,18 @@ export class SocialItemsService {
       file: 'inblog.svg'
     }
   ];
-  constructor() { }
 
-  socialItems(socialArray: string[]) {
-    return this.social.filter((socialItem) => {
-      return socialArray.includes(socialItem.name);
-    })
+  constructor() {
+
   }
+
+  socialItems(socialArray: string[]): SocialItem[] {
+    return this.social.filter((socialItem) => socialArray.includes(socialItem.name));
+  }
+
 }
 
-interface SocialItems {
+interface SocialItem {
   name: string;
   file: string;
 }

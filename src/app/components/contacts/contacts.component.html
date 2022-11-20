@@ -1,0 +1,108 @@
+<section class="contact-info">
+  <div class="wrapper">
+    <div class="contact-info__inner">
+      <div class="contact-info__main">
+        <span></span>
+        <h1 class="section__title contact-info__title">Get in touch</h1>
+
+        <address class="address">
+          <div class="address__content ">
+            <p class="address__paragraph address__paragraph-mail">Talk to us:</p>
+            <a class="address__link address__mail" href="mailto:hello@createx.com">{{email}}</a>
+          </div>
+          <div class="address__content">
+            <p class="address__paragraph address__paragraph-phone-number">Call us:</p>
+            <a class="address__link address__phone-number" href="tel:+7405550128">{{phoneNumber}}</a>
+          </div>
+          <div class="address__content">
+
+            <p class="address__paragraph address__paragraph-location">Address:</p>
+            <a class="address__link address__location">{{address}}</a>
+          </div>
+        </address>
+
+        <div class="social contact-info__column">
+          <p class="social__paragraph">Follow us:</p>
+          <div class="social__links">
+            <ng-container *ngFor="let item of socialItems(socialContactsArr); let i = index">
+              <ng-container *ngIf="i <= 10">
+                <a href="#" class="social__link contact-info__link_shift">
+                  <button class="social__{{item.name}}"></button>
+                </a>
+              </ng-container>
+            </ng-container>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="contact-info__graphics">
+        <div class="contact-info__map">
+          <ya-map [center]="[55.796557, 49.108112]" [zoom]="17">
+            <ya-placemark [geometry]="[55.796557, 49.108112]"></ya-placemark>
+          </ya-map>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-us">
+  <div class="wrapper">
+    <div class="contact-us__inner">
+      <div class="contact-us__graphics">
+        <img class="contact-us__img" src="./assets/images/contact-us/woman.svg" alt="Изображение женщины. Изображение для декора">
+      </div>
+
+      <div class="contact-us__main">
+        <h1 class="section__title contact-us__title">Drop us a line</h1>
+
+        <form class="form-contact" action="">
+          <div class="form-contact__column">
+            <div class="form-contact__row">
+              <label for="firstName" class="form-contact__label field-required">First Name</label>
+              <input type="text" class="form-contact__input" id="firstName" placeholder="Your first name" required>
+            </div>
+            <div class="form-contact__row">
+              <label for="form-contact-email" class="form-contact__label field-required">Email</label>
+              <input type="email" class="form-contact__input" id="form-contact-email" placeholder="Your working email" required>
+            </div>
+
+          </div>
+
+          <div class="form-contact__column">
+            <div class="form-contact__row">
+              <label for="lastName" class="form-contact__label field-required">Last Name</label>
+              <input type="text" class="form-contact__input" id="lastName" placeholder="Your last name" required>
+            </div>
+            <div class="form-contact__row">
+              <label for="phoneNumber" class="form-contact__label">Phone</label>
+              <input type="tel" class="form-contact__input" id="phoneNumber" placeholder="Your phone number">
+            </div>
+          </div>
+
+
+
+          <div class="form-contact__column form-contact__column-description">
+            <label class="form-contact__description-label field-required" for="description">Message</label>
+            <textarea class="form-contact__description" name="" id="description" cols="30" rows="10" placeholder="Your message" required></textarea>
+          </div>
+
+
+          <div class="form-contact__agree form-contact__column">
+            <label class="checkbox style-a">
+              <input type="checkbox" checked="checked">
+              <div class="checkbox__checkmark"></div>
+              <div class="checkbox__text">I agree to receive communications from Createx Online School</div>
+            </label>
+          </div>
+
+          <div class="form-contact__column">
+            <button class="btn form-contact__btn">Send message</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

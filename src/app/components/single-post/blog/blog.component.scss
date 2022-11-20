@@ -1,0 +1,65 @@
+
+// blog styles
+
+
+.blog {
+  margin-bottom: 11.25em;
+
+  &__header {
+    position: relative;
+  }
+  &__over-title {
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  &__title {
+    font-size: 2.875em;
+    font-weight: 900;
+    margin: .2em 0 1.5em 0;
+  }
+  &__arrows {
+    position: absolute;
+    width: 70px;
+    top: 1.5em;
+    right: 0;
+    height: 40px;
+    margin-right: 1em;
+    //border: 1px solid #424551;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-left,
+    &-right {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+    &-left {
+      background: url("../../../../assets/images/arrows/arrow-left.svg") no-repeat center;
+    }
+    &-right {
+      background: url("../../../../assets/images/arrows/arrow-right.svg") no-repeat center;
+    }
+  }
+  &__articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+    margin-bottom: 4em;
+  }
+  &__more-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-title {
+      margin-right: 2.5em;
+    }
+  }
+
+  &__btn-link {
+    color: #fff;
+  }
+}

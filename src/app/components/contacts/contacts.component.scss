@@ -1,0 +1,274 @@
+
+/*
+  contact-info styles
+*/
+.container {
+  width: 1000px;
+  height: 500px;
+}
+.contact-info {
+  margin-bottom: 92px;
+
+  &__graphics {
+    //width: 100%;
+    //height: 100%;
+    max-width: 60%;
+    flex: 2 1 60%;
+    //width: 600px;
+    //height: 400px;
+  }
+  &__map {
+    width: 100%;
+    height: 100%;
+  }
+  &__img {
+     //display: block;
+    width: 100%;
+    height: 100%;
+     object-fit: cover;
+  }
+
+  &__title:before {
+    content: "Contact Info";
+    font-size: .3em;
+    position: absolute;
+    top: -25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__link_shift {
+    margin-right: 38px;
+  }
+  &__column {
+    flex-direction: column;
+  }
+}
+.section__title {
+  font-size: 2.875rem;
+  font-weight: 900;
+  margin: .4em 0 40px 0;
+  position: relative;
+}
+
+.contact-info__inner {
+  display: flex;
+}
+.contact-info__main {
+  flex: 1 2 40%;
+  margin-right: 1em;
+}
+
+
+.contact-us__inner {
+  display: flex;
+}
+
+.address {
+  font-style: normal;
+  padding-left: 40px;
+  margin-bottom: 40px;
+  &__link {
+    text-decoration: none;
+    font-style: normal;
+    display: inline-block;
+    color: #1E212C;
+  }
+  &__paragraph {
+    position: relative;
+
+    &-mail:before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: -40px;
+      top: 0;
+      background: url("../../../assets/images/contact-info/message.svg") no-repeat;
+    }
+    &-phone-number:before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: -40px;
+      top: -3px;
+      background: url("../../../assets/images/contact-info/phone.svg") no-repeat;
+    }
+    &-location:before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: -40px;
+      top: 0;
+      background: url("../../../assets/images/contact-info/pointLocation.svg") no-repeat;
+    }
+  }
+
+}
+
+
+/*
+  contact-us styles
+*/
+
+.contact-us {
+  display: flex;
+  margin-bottom: 180px;
+  &__graphics {
+    flex: 1 1 40%;
+    display: flex;
+    min-width: 40%;
+  }
+  &__img {
+    max-width: 75%;
+    max-height: 100%;
+    //object-fit: contain;
+  }
+  &__main {
+    flex: 1 1 60%;
+  }
+  &__title:before {
+    content: "Drop us a line";
+    font-size: .3em;
+    position: absolute;
+    top: -25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+.form-contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  margin-bottom: 1.5em;
+  &__btn {
+    width: 100%;
+  }
+}
+
+.form-contact__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  margin-bottom: 1.5em;
+
+}
+
+.form-contact__row{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form-contact__row:last-child {
+  margin-bottom: 0px;
+}
+.form-contact__row:last-child {
+  margin-right: 0;
+}
+.form-contact__label {
+  display: block;
+  margin-bottom: 10px;
+}
+.form-contact__column-description {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.form-contact__input {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #D7DADD;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.form-contact__description {
+  width: 100%;
+  border-radius: 4px;
+  max-height: 128px;
+  border: 1px solid #D7DADD;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.form-contact__description-label {
+  display: block;
+  margin-bottom: .8em;
+}
+
+
+.form-contract__checkbox {
+  align-self: start;
+}
+.form-contact__agree {
+  display: flex;
+}
+// Обязательные поля
+.field-required {
+  position: relative;
+
+}
+.field-required:after {
+  content: "*";
+  color: #FF3F3A;
+  margin-left: 2px;
+}
+
+
+//Media queries
+
+
+@media (max-width: 900px) {
+  .contact-info__inner {
+    display: block;
+
+  }
+  .contact-info__graphics {
+    width: 100%;
+    max-width: 100%;
+  }
+  .contact-info__main {
+    margin-bottom: 2em;
+  }
+  .address {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    //flex-decoration: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-us {
+    margin-bottom: 4em;
+    &__graphics {
+      display: none;
+    }
+  }
+
+}
+
+@media (max-width: 530px) {
+  .address {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 456px) {
+  .form-contact {
+    grid-template-columns: 1fr;
+
+    &__column-descrtiption {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  }
+
+}
+
