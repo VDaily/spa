@@ -1,6 +1,8 @@
 import {Component, OnDestroy, OnInit } from '@angular/core';
 import { SocialItemsService } from '../../services/socialItems/social-items.service';
 import { MatDialogRef } from '@angular/material/dialog';
+import {ModalWindowService} from "../../services/modalWindow/modal-window.service";
+import {SignUpComponent} from "../sign-up/sign-up.component";
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -36,7 +38,8 @@ export class SignInComponent implements OnInit, OnDestroy {
 
   constructor(
     private social: SocialItemsService,
-    private matDialogRef: MatDialogRef<SignInComponent>
+    private matDialogRef: MatDialogRef<SignUpComponent | SignInComponent>,
+    private modal: ModalWindowService
   ) { }
   ngOnInit(): void { }
 
@@ -69,7 +72,10 @@ export class SignInComponent implements OnInit, OnDestroy {
     this.isHiddenPass = !this.isHiddenPass;
     this.changeCurrentEye();
   }
-
+  openSignUp():void {
+    this.matDialogRef.close();
+    this.modal.open(SignUpComponent, "0ms", "0ms");
+  }
 }
 
 interface Eye {

@@ -44,11 +44,11 @@
 
         <div class="authorization__wrapper">
           <div class="authorization__item">
-            <a class="authorization__link authorization__log-in" (click)="onOpenDialogSignInClick()">Log in</a>
+            <a class="authorization__link authorization__log-in" (click)="openSignIn()">Log in</a>
             <span class="authorization__span">/</span>
-            <a class="authorization__link authorization__register" (click)="onOpenDialogSignUpClick()">Register</a>
+            <a class="authorization__link authorization__register" (click)="openSignUp()">Register</a>
           </div>
-          <span class="authorization__modal" (click)="onOpenDialogSignInClick()"></span>
+          <span class="authorization__modal" (click)="openSignIn()"></span>
         </div>
       </div>
     </div>

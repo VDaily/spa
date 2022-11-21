@@ -5,6 +5,7 @@ import {SignInComponent} from "../sign-in/sign-in.component";
 import {SignUpComponent} from "../sign-up/sign-up.component";
 import {MatIconRegistry} from "@angular/material/icon";
 import {DomSanitizer} from "@angular/platform-browser";
+import {ModalWindowService} from "../../services/modalWindow/modal-window.service";
 
 @Component({
   selector: 'app-header',
@@ -17,6 +18,7 @@ export class HeaderComponent implements OnInit {
     private matDialog: MatDialog,
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
+    private modal: ModalWindowService
   ) {
     this.matIconRegistry.addSvgIcon(
       'logo',
@@ -30,11 +32,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  onOpenDialogSignInClick():void {
-    this.matDialog.open(SignInComponent);
+  openSignIn():void {
+    this.modal.open(SignInComponent, "0ms", "0ms");
   }
-  onOpenDialogSignUpClick():void {
-    this.matDialog.open(SignUpComponent);
+  openSignUp():void {
+    this.modal.open(SignUpComponent, "0ms", "0ms");
   }
 }
