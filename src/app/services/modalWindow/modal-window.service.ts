@@ -14,13 +14,8 @@ export class ModalWindowService {
 
   open(
     component: ComponentType<any>,
-    enterAnimationDuration: string,
-    exitAnimationDuration: string
+    options: any
   ): void {
-
-    this.matDialog.open(component, {
-      enterAnimationDuration,
-      exitAnimationDuration
-    });
+    this.matDialog.open(component, options);
   }
 }

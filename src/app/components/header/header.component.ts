@@ -33,9 +33,15 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
   openSignIn():void {
-    this.modal.open(SignInComponent, "0ms", "0ms");
+    this.modal.open(SignInComponent, {
+      enterAnimationDuration: "0ms",
+      exitAnimationDuration: "0ms",
+    });
   }
   openSignUp():void {
-    this.modal.open(SignUpComponent, "0ms", "0ms");
+    this.modal.open(SignUpComponent, {
+      enterAnimationDuration: "0ms",
+      exitAnimationDuration: "0ms",
+    });
   }
 }

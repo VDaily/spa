@@ -47,7 +47,7 @@ body {
   position: relative;
   font-size: 16px;
   margin: 0;
-  height: 100%
+  height: 100%;
 }
 body.modal-open {
   overflow: hidden;
@@ -63,10 +63,8 @@ a {
 }
 
 .wrapper {
-  max-width: calc(1280px);
-  //min-width: 800px;
+  max-width: 1280px;
   padding: 0 1.5em;
-  //   display: flex;
   margin: 0 auto;
   box-sizing: border-box;
 }

@@ -1,0 +1,9 @@
+<section class="charts">
+  <div class="charts-wrapper">
+    <div class="charts__inner">
+      <ng-container *ngFor="let office of uniqueOffices | keyvalue">
+        <app-chart [index]="'id' + office.value.id" [office]="office.value"></app-chart>
+      </ng-container>
+    </div>
+  </div>
+</section>

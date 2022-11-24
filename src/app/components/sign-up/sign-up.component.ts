@@ -103,7 +103,10 @@ export class SignUpComponent implements OnInit, OnDestroy {
 
   openSignIn():void {
     this.matDialogRef.close();
-    this.modal.open(SignInComponent, "0ms", "0ms");
+    this.modal.open(SignInComponent, {
+      enterAnimationDuration: "0ms",
+      exitAnimationDuration: "0ms",
+    });
   }
 
 }

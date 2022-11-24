@@ -1,0 +1,17 @@
+.charts {
+  position: relative;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.charts-wrapper {
+  padding: 0 4em;
+}
+
+.charts__inner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3em;
+  padding-bottom: 11em;
+}

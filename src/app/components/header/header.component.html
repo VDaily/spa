@@ -5,32 +5,7 @@
         <a routerLink="/"><mat-icon class="logo__icon" svgIcon="logo"></mat-icon></a>
       </div>
 
-      <nav class="nav">
-        <div for="openSidebarMenu" class="nav__icon">
-          <span></span>
-        </div>
-        <div class="nav__body">
-          <ul class="nav__list">
-            <li class="nav__list-item">
-              <a href="#" class="nav__link">About Us</a>
-            </li>
-            <li class="nav__list-item">
-              <a href="#" class="nav__link">Courses</a>
-            </li>
-            <li class="nav__list-item">
-              <a href="#" class="nav__link">Events</a>
-            </li>
-            <li class="nav__list-item">
-              <a [routerLink]="['/single-post']" routerLinkActive="active" ariaCurrentWhenActive="page" class="nav__link">Blog</a>
-            </li>
-            <li class="nav__list-item">
-              <a [routerLink]="['/contacts']" routerLinkActive="active" ariaCurrentWhenActive="page" class="nav__link">Contacts</a>
-            </li>
-          </ul>
-
-        </div>
-
-      </nav>
+      <app-nav-main class="nav-main"></app-nav-main>
 
 
       <div class="authorization">

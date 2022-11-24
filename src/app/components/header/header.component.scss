@@ -28,7 +28,7 @@
     flex: 1 0 100%;
 
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 }
 
@@ -44,29 +44,28 @@
     width: 100%;
   }
 }
-
+.nav-main {
+  flex-grow: 7;
+}
 .nav {
-
-
   flex: 1 1 40%;
   white-space: nowrap;
   display: flex;
   align-items: center;
   margin-right: 1.5em;
-
   &__list {
-    max-width: 60%;
+    flex: 1 1 80%;
+    max-width: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     list-style-type: none;
     align-items: center;
-    margin: 0;
+    margin: 0 0 0 1em;
     position: relative;
   }
 
   &__list-item {
-    //padding: 8px;
     margin-right: 20px;
   }
 
@@ -82,7 +81,6 @@
 // authorization styles
 .authorization {
   display: flex;
-  margin-right: 50px;
   align-items: center;
 
   &__wrapper {
