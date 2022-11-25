@@ -1,4 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import SwiperCore, {Swiper, Pagination, Navigation} from 'swiper';
+import {SwiperComponent} from "swiper/angular";
 
 @Component({
   selector: 'app-blog',
@@ -6,6 +8,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
+  // @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
+  swiper: any;
   blogArticlesArr = [
     {
       id: 1,
@@ -38,13 +42,47 @@ export class BlogComponent implements OnInit {
       date: 'August 8, 2020',
       title: 'Should you choose a creative profession if you are attracted to creativity?',
       content: 'Curabitur nisl tincidunt eros venenatis vestibulunisl tincidunt eros venenatis vestibulu'
+    },
+    {
+      id: 2,
+      name: 'article-img2.svg',
+      alt: 'Laptop picture',
+      categoryName: 'Development',
+      type: 'Article',
+      date: 'September 1, 2020',
+      title: 'How to choose the first programming language for a beginner',
+      content: 'Turpis sed at magna laoreet gravida consequat tortor placerat. Gravida vitae aliquet enim egestaslaoreet gravida consequat tortor placerat. Gravida vitae aliquet enim egestas '
     }
   ]
 
-  constructor() {
+  constructor(
+  ) {
+
   }
 
   ngOnInit(): void {
-  }
+    this.swiper = new Swiper('.mySwiper', {
+      modules: [Pagination, Navigation],
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        clickable: true,
+      },
+      navigation: true
 
+
+      // rewind: true
+    })
+  }
+  slideNext(){
+    if(!this.swiper) return;
+    this.swiper.slideNext(100);
+    console.log(this.swiper);
+  }
+  slidePrev(){
+    if(!this.swiper) return;
+    this.swiper.slidePrev(100);
+    console.log(this.swiper);
+  }
 }

@@ -1,4 +1,6 @@
-
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
 // blog styles
 
 
@@ -44,9 +46,9 @@
     }
   }
   &__articles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2em;
+    //display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    //grid-gap: 2em;
     margin-bottom: 4em;
   }
   &__more-content {
@@ -63,3 +65,6 @@
     color: #fff;
   }
 }
+
+
+

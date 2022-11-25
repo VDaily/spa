@@ -105,7 +105,7 @@ export class ChartService {
   createChart(index: string, officeObj: UniqueOffices): Chart {
 
     let sets = officeObj.datasets.map((sets: Sets) => sets),
-        officeName = officeObj.officeName ? officeObj.officeName : `Офис без имени (${index})`,
+        officeName = officeObj.officeName ? officeObj.officeName : `Офис без имени`,
         labelsArr = officeObj.dates.map((date: string) => date);
 
 
