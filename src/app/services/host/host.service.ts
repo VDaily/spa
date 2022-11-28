@@ -7,7 +7,7 @@ export class HostService {
 
   constructor() { }
 
-  getHost() {
+  getHost(): string {
     return window.location.host;
   }
 }

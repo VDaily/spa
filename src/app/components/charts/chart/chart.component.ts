@@ -21,7 +21,7 @@ export class ChartComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {  }
 
   ngAfterViewInit(): void {
-    if(!this.index || !this.office) return;
+    if(!(this.index && this.office)) return;
     this.chart.createChart(this.index, this.office);
   }
 

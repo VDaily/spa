@@ -2,6 +2,28 @@ import {Injectable} from '@angular/core';
 import offices from '../../json/offices.json';
 import Chart from 'chart.js/auto';
 
+export interface UniqueOffices {
+  id: number | string;
+  datasets: Sets[];
+  dates: string[];
+  officeName: string
+}
+
+export interface Sets {
+  label: string,
+  data: number[]
+}
+
+export interface Office {
+  src_office_id: number;
+  office_name: string;
+  dt_date: string;
+  [key: string | number]: any
+}
+export interface Data {
+  id: string;
+  value: UniqueOffices;
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -52,11 +74,12 @@ export class ChartService {
 
 
   getUniqueOffices(): Map<number | string, UniqueOffices> {
-    let uniqueOfficesMap = new Map<number | string, UniqueOffices>();
-    let nameSecondaryProperties = this.getNameSecondaryProperties();
-    let uniqueDatesMap = new Map<any, any>;
-    let indexFullStatistic = "FullStatistic";
-    let fullStatistic = this.createOfficeObj(indexFullStatistic, "Statistic of all offices");
+    const uniqueOfficesMap = new Map<number | string, UniqueOffices>();
+    const nameSecondaryProperties = this.getNameSecondaryProperties();
+    const uniqueDatesMap = new Map<string, Sets[]>;
+    console.log(uniqueDatesMap);
+    const indexFullStatistic = "FullStatistic";
+    const fullStatistic = this.createOfficeObj(indexFullStatistic, "Statistic of all offices");
 
     this.myOffices.forEach((office: Office) => {
       // Filling in a unique ID
@@ -82,7 +105,7 @@ export class ChartService {
 
       //Adding values to the Datasets array
       nameSecondaryProperties.forEach((name: string, index) => {
-        if(!currentObj) return;
+        if(!(currentObj && datasetsByDate)) return;
         currentObj.datasets[index].data.push(office[name]);
         datasetsByDate[index].data.push(office[name]);
       })
@@ -104,7 +127,7 @@ export class ChartService {
 
   createChart(index: string, officeObj: UniqueOffices): Chart {
 
-    let sets = officeObj.datasets.map((sets: Sets) => sets),
+    const sets = officeObj.datasets.map((sets: Sets) => sets),
         officeName = officeObj.officeName ? officeObj.officeName : `Офис без имени`,
         labelsArr = officeObj.dates.map((date: string) => date);
 
@@ -129,22 +152,4 @@ export class ChartService {
 }
 
 
-export interface UniqueOffices {
-  id: number | string;
-  datasets: Sets[];
-  dates: string[];
-  officeName: string
-}
-
-export interface Sets {
-  label: string,
-  data: number[]
-}
-
-export interface Office {
-  src_office_id: number;
-  office_name: string;
-  dt_date: string;
-  [key: string | number]: any
-}
 

@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, Inject, OnInit} from '@angular/core';
-import {ChartService} from "../../../../services/chart/chart.service";
+import {ChartService, Data} from "../../../../services/chart/chart.service";
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
@@ -8,9 +8,10 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
   styleUrls: ['./full-screen.component.scss']
 })
 export class FullScreenComponent implements OnInit, AfterViewInit {
+  id = "fullScreenChart";
   constructor(
     private chart: ChartService,
-    @Inject(MAT_DIALOG_DATA) public data: any,
+    @Inject(MAT_DIALOG_DATA) public data: Data,
   ) {
   }
 
@@ -18,6 +19,7 @@ export class FullScreenComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.chart.createChart(this.data.id + '1', this.data.value);
+    console.log(this.data);
+    this.chart.createChart(this.id, this.data.value);
   }
 }
