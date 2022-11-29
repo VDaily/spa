@@ -8,11 +8,13 @@
 
 .logo {
   width: 100%;
+
   &__icon {
     width: 130px;
     height: 22px;
   }
 }
+
 /*
   header styles
 */
@@ -33,7 +35,6 @@
 }
 
 
-
 .logo {
   display: flex;
   width: 130px;
@@ -44,15 +45,18 @@
     width: 100%;
   }
 }
+
 .nav-main {
   flex-grow: 7;
 }
+
 .nav {
   flex: 1 1 40%;
   white-space: nowrap;
   display: flex;
   align-items: center;
   margin-right: 1.5em;
+
   &__list {
     flex: 1 1 80%;
     max-width: 100%;
@@ -98,10 +102,12 @@
     height: 30px;
     left: -22px;
   }
+
   &__graphics {
     width: 100%;
     height: 100%;
   }
+
   &__btn_disabled {
     display: none;
   }
@@ -109,14 +115,17 @@
   &__btn_shift {
     margin-right: 2.8em;
   }
+
   &__item {
     white-space: nowrap;
   }
+
   &__link {
     color: #1E212C;
     text-decoration: none;
     cursor: pointer;
   }
+
   &__link:hover {
     text-decoration: underline;
   }
@@ -124,14 +133,13 @@
   &__span {
     padding: 0 5px;
   }
+
   &__modal {
     display: none;
     width: 100%;
     height: 100%;
   }
 }
-
-
 
 
 //Media queries
@@ -142,15 +150,18 @@
       //display: block;
       white-space: nowrap;
     }
+
     &__btn {
       display: none;
     }
+
     &__btn-message {
       display: block;
       padding: 0 20px;
       margin-right: 2.4em;
       position: relative;
     }
+
     &__message {
       width: 40px;
       top: 0;
@@ -189,6 +200,7 @@
     &__item {
       display: none;
     }
+
     &__modal {
       position: absolute;
       left: 0;
@@ -220,6 +232,7 @@
   .nav {
     flex: 1 1 30%;
     height: 52px;
+
     &__icon {
       display: block;
       z-index: 5;
@@ -243,6 +256,7 @@
       background-color: rgba(26, 26, 26, .9);
       border-radius: 4px;
     }
+
     &__icon:before,
     &__icon:after {
       content: "";

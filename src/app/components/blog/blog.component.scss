@@ -1,0 +1,148 @@
+// main-blog styles
+.main-blog {
+  &__header {
+    text-align: center;
+    margin-bottom: 3.625em;
+  }
+
+  &__articles {
+    margin-bottom: 8em;
+  }
+
+  &__articles-inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2.1875em;
+    margin-bottom: 3em;
+  }
+
+  &__article:nth-child(8n + 1), &__article:nth-child(8n + 6) {
+    grid-column: 1/5;
+  }
+
+  &__article:nth-child(8n + 2),
+  &__article:nth-child(8n + 7) {
+    grid-column: 5/9;
+  }
+
+  &__article:nth-child(8n + 3),
+  &__article:nth-child(8n + 8) {
+    grid-column: 9/13;
+  }
+
+  &__article:nth-child(8n + 4) {
+    grid-column: 1/8;
+  }
+
+  &__article:nth-child(8n + 5) {
+    grid-column: 8/13;
+  }
+}
+
+
+.categoryName {
+  position: absolute;
+  top: .7em;
+  left: .7em;
+  background: #fff;
+  padding: .5em;
+  border-radius: 4px;
+  font-size: .875em;
+
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #9A9CA5;
+  }
+
+  &__article:before,
+  &__podcast:before,
+  &__video:before {
+    content: "";
+    margin-right: .5em;
+    width: 15px;
+    height: 15px;
+    opacity: .8;
+    background: url("../../../assets/images/articles/file.svg") no-repeat center;
+  }
+
+  &__podcast:before {
+    background: url("../../../assets/images/blog/category/micro.svg") no-repeat center;
+  }
+
+  &__video:before {
+    background: url("../../../assets/images/blog/category/video.svg") no-repeat center;
+  }
+}
+
+.option-bar {
+  display: flex;
+  align-items: center;
+
+  &__button {
+    color: #FF3F3A;
+    background: #fff;
+    padding: .625em 1.25em;
+    margin-right: 1em;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &_active {
+      border: 1px solid #FF3F3A;
+
+      & .categoryName__title {
+        color: #FF3F3A;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__categories {
+    display: flex;
+    align-items: center;
+    flex-grow: 7;
+  }
+
+  &__category-title {
+    font-weight: 700;
+    margin-right: .75em;
+  }
+
+  &__category-select {
+    width: 160px;
+    padding: 0.6875em 1em;
+    border-radius: 4px;
+    line-height: 150%;
+    border: 1px solid #000;
+  }
+
+  &__category-option {
+    padding: 0.6875em 1em;
+    height: 30px;
+  }
+
+  &__field {
+    width: 285px;
+  }
+}
+
+
+// paginator styles
+.paginator {
+  display: flex;
+  gap: 1em;
+  &__numbers {
+    display: flex;
+    gap: 1em;
+    cursor: pointer;
+    font-weight: 700;
+    color: #424551;
+  }
+  &__arrow {
+    font-weight: 700;
+    cursor: pointer;
+  }
+}

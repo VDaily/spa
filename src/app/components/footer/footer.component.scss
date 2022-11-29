@@ -2,11 +2,13 @@
 
 .logo {
   width: 100%;
+
   &__icon {
     width: 130px;
     height: 22px;
   }
 }
+
 /*
   footer styles
 */
@@ -46,10 +48,10 @@
   }
 
 }
+
 .information-blog {
 
 }
-
 
 
 .footer__inner {
@@ -115,9 +117,6 @@
 }
 
 
-
-
-
 @media (max-width: 586px) {
   .footer__inner {
     grid-template-columns: repeat(2, 1fr);
@@ -127,6 +126,7 @@
     grid-column-end: 3;
   }
 }
+
 @media (max-width: 440px) {
   .footer__inner {
     grid-template-columns: 1fr;

@@ -1,7 +1,10 @@
 <article class="blog-article">
   <mat-card class="blog-article-inner">
     <a href="#">
-      <img colorful mat-card-image [src]="srcImg + article.name" [alt]="article.alt">
+      <div class="blog-article__graphics">
+        <img colorful mat-card-image [src]="srcImg + article.name" [alt]="article.alt">
+      </div>
+
       <div class="categoryName">
         <span class="categoryName__title" [ngClass]="articleTypeObj.className">{{articleTypeObj.title}}</span>
       </div>

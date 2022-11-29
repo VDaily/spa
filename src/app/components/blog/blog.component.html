@@ -1,0 +1,56 @@
+<section class="main-blog">
+  <div class="wrapper">
+    <div class="main-blog__header">
+      <div class="main-title">
+        <p class="main-title__over-title">Our blog</p>
+        <h2 class="main-title__title">Createx School Journal</h2>
+      </div>
+
+      <div class="option-bar">
+        <div class="option-bar__categories">
+          <ng-container *ngFor="let category of typesWithAll; let i = index">
+
+            <button class="option-bar__button" (click)="changeType(i)"
+                    [ngClass]="currentType === category ? 'option-bar__button_active' : ''">
+              <span class="categoryName__title"
+                    [ngClass]="'categoryName__' + (category | lowercase)">{{category}}</span>
+            </button>
+          </ng-container>
+        </div>
+
+        <div class="option-bar__categories">
+          <p class="option-bar__category-title">Blog category</p>
+          <mat-form-field>
+            <mat-select [(value)]="currentType">
+              <ng-container *ngFor="let category of typesWithAll; let i = index">
+                <mat-option (click)="changeType(i)" [value]="category">{{category}}</mat-option>
+              </ng-container>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="option-bar__field">
+          <form action="" class="search option-bar_width">
+            <input type="text" name="f" [(ngModel)]="name" class="search__input" placeholder="Search blog...">
+            <button class="search__button"></button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="main-blog__content">
+      <div class="main-blog__articles">
+        <div class="main-blog__articles-inner">
+          <ng-container *ngFor="let article of currentArticles; let i = index">
+            <app-blog-article class="main-blog__article" [article]="article"></app-blog-article>
+          </ng-container>
+        </div>
+        <mat-paginator [length]="filteredArticles.length" [pageSize]="settings.length"
+                       (page)="OnPageChange($event)" [hidePageSize]="isHidePageSize" [pageSizeOptions]="[1,3,6]"></mat-paginator>
+
+      </div>
+    </div>
+  </div>
+  <app-subscribe-section></app-subscribe-section>
+</section>

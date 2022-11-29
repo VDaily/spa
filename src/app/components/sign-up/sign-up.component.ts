@@ -1,18 +1,18 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
-import {SocialItem, SocialItemsService} from '../../services/socialItems/social-items.service';
-import {MatDialogRef} from "@angular/material/dialog";
-import {SignInComponent} from "../sign-in/sign-in.component";
-import {ModalWindowService} from "../../services/modalWindow/modal-window.service";
+import { Component, OnInit, OnDestroy } from "@angular/core";
+import { SocialItem, SocialItemsService } from "../../services/socialItems/social-items.service";
+import { MatDialogRef } from "@angular/material/dialog";
+import { SignInComponent } from "../sign-in/sign-in.component";
+import { ModalWindowService } from "../../services/modalWindow/modal-window.service";
 
 @Component({
-  selector: 'app-sign-up',
-  templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.scss']
+  selector: "app-sign-up",
+  templateUrl: "./sign-up.component.html",
+  styleUrls: ["./sign-up.component.scss"],
 })
 export class SignUpComponent implements OnInit, OnDestroy {
   isHiddenPass = true;
   isHiddenPassAgain = true;
-  socialLogUp = ['facebook', 'google', 'twitter', 'inblog']
+  socialLogUp = ["facebook", "google", "twitter", "inblog"];
 
   pictures = {
     close: {
@@ -22,32 +22,31 @@ export class SignUpComponent implements OnInit, OnDestroy {
     eyes: {
       src: "./assets/images/register/",
       open: {
-        src: 'eye-open.svg',
-        alt: "Открытый глаз, можно посмотреть пароль"
+        src: "eye-open.svg",
+        alt: "Открытый глаз, можно посмотреть пароль",
       },
       close: {
-        src: 'eye.png',
-        alt: "Закрытый глаз, нельзя посмотреть пароль"
-      }
-    }
-  }
-  currentEyeObj : Eye = {
+        src: "eye.png",
+        alt: "Закрытый глаз, нельзя посмотреть пароль",
+      },
+    },
+  };
+  currentEyeObj: Eye = {
     src: `${this.pictures.eyes.src + this.pictures.eyes.close.src}`,
-    alt: `${this.pictures.eyes.close.alt}`
-  }
-  currentEyeObjAgain : Eye = {
+    alt: `${this.pictures.eyes.close.alt}`,
+  };
+  currentEyeObjAgain: Eye = {
     src: `${this.pictures.eyes.src + this.pictures.eyes.close.src}`,
-    alt: `${this.pictures.eyes.close.alt}`
-  }
+    alt: `${this.pictures.eyes.close.alt}`,
+  };
 
   constructor(
     private social: SocialItemsService,
     private matDialogRef: MatDialogRef<SignUpComponent | SignInComponent>,
     private modal: ModalWindowService
-  ) {
-  }
+  ) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   changeCurrentEye(): void {
     let currentSrc: string, currentAlt: string;
@@ -62,9 +61,10 @@ export class SignUpComponent implements OnInit, OnDestroy {
 
     this.currentEyeObj = {
       src: this.pictures.eyes.src + currentSrc,
-      alt: currentAlt
-    }
+      alt: currentAlt,
+    };
   }
+
   changeCurrentEyeAgain(): void {
     let currentSrc: string, currentAlt: string;
 
@@ -78,17 +78,20 @@ export class SignUpComponent implements OnInit, OnDestroy {
 
     this.currentEyeObjAgain = {
       src: this.pictures.eyes.src + currentSrc,
-      alt: currentAlt
-    }
+      alt: currentAlt,
+    };
   }
+
   changeIsHiddenPass(): void {
     this.isHiddenPass = !this.isHiddenPass;
     this.changeCurrentEye();
   }
+
   changeIsHiddenPassAgain(): void {
     this.isHiddenPassAgain = !this.isHiddenPassAgain;
     this.changeCurrentEyeAgain();
   }
+
   socialItems(socialItems: string[]): SocialItem[] {
     return this.social.socialItems(socialItems);
   }
@@ -101,14 +104,13 @@ export class SignUpComponent implements OnInit, OnDestroy {
     this.matDialogRef.close();
   }
 
-  openSignIn():void {
+  openSignIn(): void {
     this.matDialogRef.close();
     this.modal.open(SignInComponent, {
       enterAnimationDuration: "0ms",
       exitAnimationDuration: "0ms",
     });
   }
-
 }
 
 interface Eye {

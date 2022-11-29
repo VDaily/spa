@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {ContactsComponent} from "./components/contacts/contacts.component";
 import {SinglePostComponent} from "./components/single-post/single-post.component";
 import { ChartsComponent } from "./components/charts/charts.component";
+import {MainBlogComponent} from "./components/blog/blog.component";
 
 const routes: Routes = [
   {
@@ -11,8 +12,8 @@ const routes: Routes = [
     data: { title: 'Our contacts' },
   },
   {
-    path: 'single-post',
-    component: SinglePostComponent,
+    path: 'main-blog',
+    component: MainBlogComponent,
     data: { title: 'Our blog' },
   },
   {

@@ -1,49 +1,45 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
-
 export class SocialItemsService {
   social: SocialItem[] = [
     {
-      name: 'facebook',
-      file: 'fb.svg',
+      name: "facebook",
+      file: "fb.svg",
     },
     {
-      name: 'google',
-      file: 'google.svg',
+      name: "google",
+      file: "google.svg",
     },
     {
-      name: 'twitter',
-      file: 'twitter.svg',
+      name: "twitter",
+      file: "twitter.svg",
     },
     {
-      name: 'youtube',
-      file: 'youtube.svg',
+      name: "youtube",
+      file: "youtube.svg",
     },
     {
-      name: 'telegram',
-      file: 'telegram.svg'
+      name: "telegram",
+      file: "telegram.svg",
     },
     {
-      name: 'instagram',
-      file: 'instagram.svg'
+      name: "instagram",
+      file: "instagram.svg",
     },
     {
-      name: 'inblog',
-      file: 'inblog.svg'
-    }
+      name: "inblog",
+      file: "inblog.svg",
+    },
   ];
 
-  constructor() {
-
-  }
+  constructor() {}
 
   socialItems(socialArray: string[]): SocialItem[] {
     return this.social.filter((socialItem) => socialArray.includes(socialItem.name));
   }
-
 }
 
 export interface SocialItem {

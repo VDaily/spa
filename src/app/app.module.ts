@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AngularYandexMapsModule, YaConfig  } from 'angular8-yandex-maps';
@@ -27,7 +27,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainContentComponent } from './components/single-post/main-content/main-content.component';
 import { ArticleComponent } from './components/single-post/main-content/article/article.component';
 import { SidebarComponent } from './components/single-post/main-content/sidebar/sidebar.component';
-import { SubscribeSectionComponent } from './components/single-post/subscribe-section/subscribe-section.component';
+import { SubscribeSectionComponent } from './components/common/subscribe-section/subscribe-section.component';
 import { BlogComponent } from './components/single-post/blog/blog.component';
 import { BlogArticleComponent } from './components/single-post/blog/blog-article/blog-article.component';
 import { TrendingArticlesComponent } from './components/single-post/main-content/sidebar/trending-articles/trending-articles.component';
@@ -35,10 +35,14 @@ import { TrendingArticleComponent } from './components/single-post/main-content/
 import { NavMainComponent } from './components/header/nav-main/nav-main.component';
 import { ChartsComponent } from './components/charts/charts.component';
 import { ChartComponent } from './components/charts/chart/chart.component';
-
+import { MainBlogComponent } from './components/blog/blog.component';
 //Directives
 import { ColorfulDirective } from './directives/colorful/colorful.directive';
 import { FullScreenComponent } from './components/charts/chart/full-screen/full-screen.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {Interceptor} from "./services/interceptor/interceptor";
 
 
 
@@ -70,6 +74,7 @@ const mapConfig: YaConfig = {
     ChartsComponent,
     ChartComponent,
     FullScreenComponent,
+    MainBlogComponent
   ],
   imports: [
     BrowserModule,
@@ -83,10 +88,15 @@ const mapConfig: YaConfig = {
     SwiperModule,
     AngularYandexMapsModule.forRoot(mapConfig),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatPaginatorModule
   ],
   entryComponents: [SignInComponent, SignUpComponent, FullScreenComponent],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 
 })

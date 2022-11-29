@@ -2,8 +2,11 @@
   <div class="wrapper">
     <div class="blog__inner">
       <div class="blog__header">
-        <p class="blog__over-title">Our blog</p>
-        <h2 class="blog__title">You may also like</h2>
+        <div class="main-title">
+          <p class="blog__over-title">Our blog</p>
+          <h2 class="blog__title">You may also like</h2>
+        </div>
+
 
         <div class="blog__arrows">
           <span class="blog__arrows-left" (click)="slidePrev()"></span>
@@ -13,14 +16,13 @@
 
       <div class="blog__articles">
 
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
             <ng-container *ngFor="let article of blogArticlesArr">
-                <app-blog-article swiperSlide class="swiper-slide" [article]="article"></app-blog-article>
+              <app-blog-article swiperSlide class="swiper-slide" [article]="article"></app-blog-article>
             </ng-container>
-            </div>
           </div>
-
+        </div>
 
 
       </div>

@@ -1,16 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { SocialItem, SocialItemsService} from '../../../../services/socialItems/social-items.service';
+import { Component, OnInit } from "@angular/core";
+import { SocialItem, SocialItemsService } from "../../../../services/socialItems/social-items.service";
+
 @Component({
-  selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: [
-    './sidebar.component.scss',
-    '../main-content.component.scss',
-    '../../single-post.component.scss'
-  ]
+  selector: "app-sidebar",
+  templateUrl: "./sidebar.component.html",
+  styleUrls: ["./sidebar.component.scss", "../main-content.component.scss", "../../single-post.component.scss"],
 })
 export class SidebarComponent implements OnInit {
-  socialAuthorArr = ['instagram', 'twitter', 'inblog'];
+  socialAuthorArr = ["instagram", "twitter", "inblog"];
 
   pictures = {
     author: {
@@ -20,16 +17,15 @@ export class SidebarComponent implements OnInit {
     articles: [
       {
         src: "",
-        alt: "Нарисованное лицо с глазом. На синием фоне"
-      }
-    ]
-  }
-  constructor(
-    private social: SocialItemsService
-  ) { }
+        alt: "Нарисованное лицо с глазом. На синием фоне",
+      },
+    ],
+  };
 
-  ngOnInit(): void {
-  }
+  constructor(private social: SocialItemsService) {}
+
+  ngOnInit(): void {}
+
   socialItems(socialItems: string[]): SocialItem[] {
     return this.social.socialItems(socialItems);
   }
