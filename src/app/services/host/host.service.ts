@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
+import { Injectable, InjectionToken } from "@angular/core";
 
-@Injectable({
-  providedIn: "root",
-})
+export const HOST = new InjectionToken<string>("host");
+
+@Injectable()
 export class HostService {
   constructor() {}
 
@@ -10,3 +10,7 @@ export class HostService {
     return window.location.host;
   }
 }
+//Затем в конструкторе подключаем так:
+// constructor(@Inject(HOST) private host: HostService) {
+//   console.log(host.getHost());
+// }
