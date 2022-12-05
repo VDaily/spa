@@ -75,10 +75,18 @@
 
   &__link {
     color: #424551;
+    &.active {
+      color: #FF3F3A;
+      border-bottom: 2px solid #FF3F3A;
+      font-weight: 600;
+      padding-bottom: 3px;
+    }
   }
 
   &__link:hover {
-    text-decoration: underline;
+    color: #FF3F3A;
+    border-bottom: 2px solid #FF3F3A;
+    padding-bottom: 3px;
   }
 }
 

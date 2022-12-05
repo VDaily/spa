@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { SocialItemsService } from "../../../../services/socialItems/social-items.service";
+import { SocialItemsService } from "../../../../services/social-items.service";
 
 @Component({
   selector: "app-article",

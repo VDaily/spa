@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
-import { SocialItem, SocialItemsService } from "../../services/socialItems/social-items.service";
+import { SocialItem, SocialItemsService } from "../../services/social-items.service";
 import { MatDialogRef } from "@angular/material/dialog";
 import { SignInComponent } from "../sign-in/sign-in.component";
-import { ModalWindowService } from "../../services/modalWindow/modal-window.service";
+import { ModalWindowService } from "../../services/modal-window.service";
 
 @Component({
   selector: "app-sign-up",

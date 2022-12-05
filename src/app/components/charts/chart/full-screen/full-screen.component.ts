@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, Inject, OnInit } from "@angular/core";
-import { ChartService, Data } from "../../../../services/chart/chart.service";
+import { ChartService, Data } from "../../../../services/chart.service";
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
 
 @Component({
@@ -15,7 +15,6 @@ export class FullScreenComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    console.log(this.data);
     this.chart.createChart(this.id, this.data.value);
   }
 }

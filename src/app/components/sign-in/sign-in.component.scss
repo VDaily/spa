@@ -9,7 +9,6 @@
   z-index: 1;
   overflow: auto;
   font-size: 14px;
-  //transform: translate(-50%, 0);
   background: rgba(0, 0, 0, .8);
 
   &__inner {
@@ -79,6 +78,10 @@
   &__signUp-link {
     color: #FF3F3A;
     text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   //  Footer styles

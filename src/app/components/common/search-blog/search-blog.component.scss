@@ -1,0 +1,24 @@
+// search styles
+.search {
+  position: relative;
+
+  &__input {
+    width: 100%;
+    padding: .7em;
+    height: 44px;
+    border-radius: 4px;
+    border: 1px solid #D7DADD;
+    box-sizing: border-box;
+  }
+
+  &__button {
+    height: 44px;
+    background: url("../../../../assets/images/global/loupe.svg") no-repeat center;
+    position: absolute;
+    padding: 0 1.5em;
+    margin-left: -3em ;
+    border: none;
+    cursor: pointer;
+
+  }
+}

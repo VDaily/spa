@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ChartService, UniqueOffices } from "../../services/chart/chart.service";
+import { ChartService, UniqueOffices } from "../../services/chart.service";
 
 @Component({
   selector: "app-charts",

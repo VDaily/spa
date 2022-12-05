@@ -1,11 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-import { StateModalWindowService } from "../../services/stateModalWindow/state-modal-window.service";
+import { StateModalWindowService } from "../../services/state-modal-window.service";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { SignInComponent } from "../sign-in/sign-in.component";
 import { SignUpComponent } from "../sign-up/sign-up.component";
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
-import { ModalWindowService } from "../../services/modalWindow/modal-window.service";
+import { ModalWindowService } from "../../services/modal-window.service";
 
 @Component({
   selector: "app-header",

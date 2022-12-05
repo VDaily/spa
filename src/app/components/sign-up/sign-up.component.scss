@@ -79,6 +79,10 @@
   &__signUp-link {
     color: #FF3F3A;
     text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   //  Footer styles

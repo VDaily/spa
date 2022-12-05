@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
-import { SocialItemsService } from "../../services/socialItems/social-items.service";
+import { SocialItemsService } from "../../services/social-items.service";
 import { MatDialogRef } from "@angular/material/dialog";
-import { ModalWindowService } from "../../services/modalWindow/modal-window.service";
+import { ModalWindowService } from "../../services/modal-window.service";
 import { SignUpComponent } from "../sign-up/sign-up.component";
 
 @Component({

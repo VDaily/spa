@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, Input, OnInit, TemplateRef, ViewChild } from "@angular/core";
 import Chart from "chart.js/auto";
-import { ChartService, UniqueOffices } from "../../../services/chart/chart.service";
+import { ChartService, UniqueOffices } from "../../../services/chart.service";
 
-import { ModalWindowService } from "../../../services/modalWindow/modal-window.service";
+import { ModalWindowService } from "../../../services/modal-window.service";
 import { FullScreenComponent } from "./full-screen/full-screen.component";
 
 @Component({

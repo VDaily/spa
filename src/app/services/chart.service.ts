@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import offices from "../../json/offices.json";
+import offices from "../json/offices.json";
 import Chart from "chart.js/auto";
 
 export interface UniqueOffices {
@@ -78,7 +78,7 @@ export class ChartService {
     const uniqueOfficesMap = new Map<number | string, UniqueOffices>();
     const nameSecondaryProperties = this.getNameSecondaryProperties();
     const uniqueDatesMap = new Map<string, Sets[]>();
-    console.log(uniqueDatesMap);
+
     const indexFullStatistic = "FullStatistic";
     const fullStatistic = this.createOfficeObj(indexFullStatistic, "Statistic of all offices");
 

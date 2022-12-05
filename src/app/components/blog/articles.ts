@@ -10,7 +10,7 @@ export interface Article {
   content: string;
 }
 
-export const blogArticlesArr = [
+export const blogArticlesArr: Article[] = [
   {
     id: 11,
     name: "article-img5.svg",

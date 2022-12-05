@@ -2,8 +2,6 @@ import { Component, Inject } from "@angular/core";
 import { MatSelectModule } from "@angular/material/select";
 import { Article, blogArticlesArr } from "./articles";
 import { PageEvent } from "@angular/material/paginator";
-import { HTTP_INTERCEPTORS } from "@angular/common/http";
-import { HostService } from "../../services/host/host.service";
 
 @Component({
   selector: "app-main-blog",
@@ -32,7 +30,6 @@ export class MainBlogComponent {
     const length = Math.ceil(this.filteredArticles.length / this.settings.length);
     for (let i = 0, count = 1; i < length; i++, count++) {
       this.numberOfPagesArr.push(count);
-      console.log(this.numberOfPagesArr);
     }
   }
 
@@ -43,14 +40,12 @@ export class MainBlogComponent {
   }
 
   getFilteredArticles(): Article[] {
-    if (this.types.includes(this.currentType)) {
-      return this.allArticles.filter((article: Article) => article.type === this.currentType);
-    } else {
-      return this.allArticles;
-    }
+    return this.types.includes(this.currentType)
+      ? this.allArticles.filter((article: Article) => article.type === this.currentType)
+      : this.allArticles;
   }
 
-  OnPageChange(event: PageEvent): void {
+  onPageChange(event: PageEvent): void {
     const startIndex = event.pageIndex * event.pageSize;
     let endIndex = event.pageSize + startIndex;
     if (endIndex > this.filteredArticles.length) endIndex = this.filteredArticles.length;

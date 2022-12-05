@@ -42,8 +42,9 @@ import { FullScreenComponent } from "./components/charts/chart/full-screen/full-
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSelectModule } from "@angular/material/select";
 import { MatPaginatorModule } from "@angular/material/paginator";
-import { Interceptor } from "./services/interceptor/interceptor";
-import { HOST, HostService } from "./services/host/host.service";
+import { Interceptor } from "./services/interceptor";
+import { HOST, HostService } from "./services/host.service";
+import { SearchBlogComponent } from './components/common/search-blog/search-blog.component';
 
 const mapConfig: YaConfig = {
   apikey: "eebfbcd4-1652-43cc-be7f-e90ff0e9e220",
@@ -73,6 +74,7 @@ const mapConfig: YaConfig = {
     ChartComponent,
     FullScreenComponent,
     MainBlogComponent,
+    SearchBlogComponent,
   ],
   imports: [
     BrowserModule,

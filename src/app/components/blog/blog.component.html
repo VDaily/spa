@@ -30,10 +30,7 @@
         </div>
 
         <div class="option-bar__field">
-          <form action="" class="search option-bar_width">
-            <input type="text" name="f" [(ngModel)]="name" class="search__input" placeholder="Search blog...">
-            <button class="search__button"></button>
-          </form>
+          <app-search-blog></app-search-blog>
         </div>
 
       </div>
@@ -47,8 +44,7 @@
           </ng-container>
         </div>
         <mat-paginator [length]="filteredArticles.length" [pageSize]="settings.length"
-                       (page)="OnPageChange($event)" [hidePageSize]="isHidePageSize"
-                       [pageSizeOptions]="[1,3,6]"></mat-paginator>
+                       (page)="onPageChange($event)" [hidePageSize]="isHidePageSize"></mat-paginator>
 
       </div>
     </div>
